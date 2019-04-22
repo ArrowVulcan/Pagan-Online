@@ -14,7 +14,7 @@ A Pagan Online fansite that help you search for items drop location or legendary
 
 [Act V] "An Endless Spring" is started, everything else is empty.
 
-You can find the site here: https://arrowvulcan.github.io/Pagan-Online/index.html
+You can find the site here: https://arrowvulcan.github.io/Pagan-Online/
 
 ### Have any questions?
 You can find and message me on Reddit "ArrowVulcan" (https://www.reddit.com/user/ArrowVulcan/)
