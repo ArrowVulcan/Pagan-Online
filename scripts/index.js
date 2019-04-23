@@ -1,7 +1,39 @@
+let searchchecker = document.getElementsByClassName('search-box');
+for (let i = 0; i < searchchecker.length; i++){
+	
+	searchchecker[i].addEventListener('click', function(e){
+		
+		if( e.target.firstElementChild.classList.value == "search-unchecked" ){
+			
+			e.target.firstElementChild.classList.remove("search-unchecked");
+			
+			if( e.target.parentElement.dataset.id == "1" ){				
+				document.getElementById('item-box-legendaries').classList.remove("hide-legendaries");
+			}else{
+				document.getElementById('item-box-artifacts').classList.remove("hide-artifacts");
+			}
+			
+		}else{
+			
+			e.target.firstElementChild.classList.add("search-unchecked");
+
+			if( e.target.parentElement.dataset.id == "1" ){				
+				document.getElementById('item-box-legendaries').classList.add("hide-legendaries");
+			}else{
+				document.getElementById('item-box-artifacts').classList.add("hide-artifacts");
+			}
+
+		}
+
+	});
+	
+}
+
+
 let acts = document.getElementsByClassName('bar-act');
 
-for (let i = 0; i < acts.length; i++)
-{
+for (let i = 0; i < acts.length; i++){
+	
 	acts[i].addEventListener('click', function(e){
 		
 		if( e.target.classList.length == 1 ){
@@ -20,8 +52,8 @@ for (let i = 0; i < acts.length; i++)
 
 let acts1 = document.getElementsByClassName('bar-act-1');
 
-for (let i = 0; i < acts1.length; i++)
-{
+for (let i = 0; i < acts1.length; i++){
+	
 	acts1[i].addEventListener('click', function(e){
 		
 		if( e.target.classList.length == 1 ){
@@ -40,8 +72,8 @@ for (let i = 0; i < acts1.length; i++)
 
 let acts2 = document.getElementsByClassName('bar-act-2');
 
-for (let i = 0; i < acts2.length; i++)
-{
+for (let i = 0; i < acts2.length; i++){
+	
 	acts2[i].addEventListener('click', function(e){
 	
 		for(let j = 0; j < acts2.length; j++){
@@ -62,6 +94,7 @@ for (let i = 0; i < acts2.length; i++)
 														 '<p id="dropCraftingMaterial">Crafting Material</p>' +
 														 '<p id="dropRecipe">Recipe</p>' +
 														 '<p id="dropBlueprint">Blueprint</p>' +
+														 '<p id="dropArtifact">Artifact</p>' +
 														 '<p id="dropShard">Shard</p>';
 		
 		
@@ -176,6 +209,53 @@ function itemSearch(event){
 	
 }
 
+function itemSearch2(event){
+
+	if( event.key != "Enter" ){ return false; }
+
+	let search = document.getElementById("searchbar2");
+	let filter = search.value.toUpperCase();
+	
+	let legend = document.getElementById("item-box-legendaries");
+	
+	for(let i = 0; i < legend.children.length; i++){
+		
+		let item = legend.children[i];
+		item.style.display = "block";
+
+		if( item.dataset.name.toUpperCase().indexOf(filter) > -1 ){
+			
+			// Found
+			
+		}else{
+			
+			item.style.display = "none";
+			
+		}
+		
+	}
+	
+	let artifact = document.getElementById("item-box-artifacts");
+	
+	for(let i = 0; i < artifact.children.length; i++){
+		
+		let item = artifact.children[i];
+		item.style.display = "block";
+
+		if( item.dataset.name.toUpperCase().indexOf(filter) > -1 ){
+			
+			// Found
+			
+		}else{
+			
+			item.style.display = "none";
+			
+		}
+		
+	}
+
+}
+
 document.getElementById("legendary-button").addEventListener('click', function(e){
 	
 	let menu = document.getElementById("legendary-menu");
@@ -260,42 +340,86 @@ function getLegendaries(item){
 	
 	if(!list){ return false };
 	
-	// Clear old info
-	document.getElementById("item-info-bonus").innerHTML = "";
-	document.getElementById("item-info-stats-box").innerHTML = "";
-	document.getElementById("item-info-rank").innerHTML = "";
-	document.getElementById("item-info-dots").innerHTML = "";
-	
-	document.getElementById("item-info-might-value").firstElementChild.innerText = list.might;
-	document.getElementById("item-info-name").firstElementChild.innerText = list.name;
-	document.getElementById("item-info-type").firstElementChild.innerText = "Legendary " + list.type;
-	document.getElementById("item-info-quality").firstElementChild.innerText = list.quality + " Quality";
-	document.getElementById("item-info-level").firstElementChild.innerText = "Item Power Level " + list.level;
-	
-	document.getElementById("item-info-dots").innerHTML += '<img class="info-line" src="images/info_line.png"><div id="info-line-dot-box"></div>';
-	for(let i = 0; i < list.dots; i++){
-		document.getElementById("info-line-dot-box").innerHTML += '<img class="info-dots" src="images/dot.png">';
-	}
-	
-	for(let i = 0; i < Object.keys(list.bonus).length; i++){
-		document.getElementById("item-info-bonus").innerHTML += '<div class="info-center text-normal"><p>' + Object.keys(list.bonus)[i] + '<span class="text-large"> ' + Object.values(list.bonus)[i] + '</span></p></div>';
-	}
-	
-	for(let i = 0; i < Object.keys(list.bonus2).length; i++){
-		document.getElementById("item-info-stats-box").innerHTML += '<div class="item-info-stats"><p class="stats-left">' + Object.keys(list.bonus2)[i] + '</p><span class="stats-right"> +' + Object.values(list.bonus2)[i] + '</span></div>';
-	}
-	
-	for(let i = 0; i < Object.keys(list.rank).length; i++){
-		document.getElementById("item-info-rank").innerHTML += '<div class="item-info-stats text-small"><p class="stats-left">' + Object.keys(list.rank)[i] + '</p><span class="stats-right">' + Object.values(list.rank)[i] + '</span></div>';
-	}
-	
-	document.getElementById("item-info-description").firstElementChild.innerText = list.description;
-	
-	if(list.special){
-		document.getElementById("item-info-box2").style.display = "";
-		document.getElementById("item-info-description-2").firstElementChild.innerText = list.special;
+	if( list.type == "Artifact" ){
+		
+		// Clear old info
+		document.getElementById("item-info-dots").innerHTML = "";
+		document.getElementById("item-info-box").style.paddingTop = "15px";
+		
+		let legendaryList = document.getElementsByClassName("item-legendary");
+		for (let i = 0; i < legendaryList.length; i++){
+			legendaryList[i].style.display = "none";
+		}
+		
+		let artifactList = document.getElementsByClassName("item-artifact");
+		for (let i = 0; i < artifactList.length; i++){
+			artifactList[i].style.display = "block";
+		}
+
+		document.getElementById("item-info-name").firstElementChild.innerText = list.name;
+		document.getElementById("item-info-type").firstElementChild.innerText = list.type;
+		
+		document.getElementById("item-info-dots").innerHTML += '<img class="info-line" src="images/info_line.png"><div id="info-line-dot-box"></div>';
+		for(let i = 0; i < list.dots; i++){
+			document.getElementById("info-line-dot-box").innerHTML += '<img class="info-dots" src="images/dot.png">';
+		}
+		
+		document.getElementById("item-info-description-artifact").firstElementChild.innerText = list.descriptionArtifact;
+		
+		document.getElementById("item-info-effectText").firstElementChild.innerText = "Artefact effect on crafted gear:";
+		document.getElementById("item-info-effect").firstElementChild.innerText = list.effect;
+
 	}else{
-		document.getElementById("item-info-box2").style.display = "none";
+		
+		// Clear old info
+		document.getElementById("item-info-bonus").innerHTML = "";
+		document.getElementById("item-info-stats-box").innerHTML = "";
+		document.getElementById("item-info-rank").innerHTML = "";
+		document.getElementById("item-info-dots").innerHTML = "";
+		document.getElementById("item-info-box").style.paddingTop = "65px";
+		
+		let artifactList = document.getElementsByClassName("item-artifact");
+		for (let i = 0; i < artifactList.length; i++){
+			artifactList[i].style.display = "none";
+		}
+		
+		let legendaryList = document.getElementsByClassName("item-legendary");
+		for (let i = 0; i < legendaryList.length; i++){
+			legendaryList[i].style.display = "block";
+		}
+		
+		document.getElementById("item-info-might-value").firstElementChild.innerText = list.might;
+		document.getElementById("item-info-name").firstElementChild.innerText = list.name;
+		document.getElementById("item-info-type").firstElementChild.innerText = "Legendary " + list.type;
+		document.getElementById("item-info-quality").firstElementChild.innerText = list.quality + " Quality";
+		document.getElementById("item-info-level").firstElementChild.innerText = "Item Power Level " + list.level;
+		
+		document.getElementById("item-info-dots").innerHTML += '<img class="info-line" src="images/info_line.png"><div id="info-line-dot-box"></div>';
+		for(let i = 0; i < list.dots; i++){
+			document.getElementById("info-line-dot-box").innerHTML += '<img class="info-dots" src="images/dot.png">';
+		}
+		
+		for(let i = 0; i < Object.keys(list.bonus).length; i++){
+			document.getElementById("item-info-bonus").innerHTML += '<div class="info-center text-normal"><p>' + Object.keys(list.bonus)[i] + '<span class="text-large"> ' + Object.values(list.bonus)[i] + '</span></p></div>';
+		}
+		
+		for(let i = 0; i < Object.keys(list.bonus2).length; i++){
+			document.getElementById("item-info-stats-box").innerHTML += '<div class="item-info-stats"><p class="stats-left">' + Object.keys(list.bonus2)[i] + '</p><span class="stats-right"> +' + Object.values(list.bonus2)[i] + '</span></div>';
+		}
+		
+		for(let i = 0; i < Object.keys(list.rank).length; i++){
+			document.getElementById("item-info-rank").innerHTML += '<div class="item-info-stats text-small"><p class="stats-left">' + Object.keys(list.rank)[i] + '</p><span class="stats-right">' + Object.values(list.rank)[i] + '</span></div>';
+		}
+		
+		document.getElementById("item-info-description").firstElementChild.innerText = list.description;
+		
+		if(list.special){
+			document.getElementById("item-info-box2").style.display = "";
+			document.getElementById("item-info-description-2").firstElementChild.innerText = list.special;
+		}else{
+			document.getElementById("item-info-box2").style.display = "none";
+		}
+	
 	}
 	
 }

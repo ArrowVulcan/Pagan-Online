@@ -10,6 +10,9 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	
+	scrollbar-color: #385863 #222;
+	scrollbar-width: thin;
 }
 
 p{
@@ -80,8 +83,8 @@ html, body{
 	height: calc(100% - 50px);
 }
 
-#search{
-position: absolute;
+#search, #search2{
+	position: absolute;
     top: 6px;
     width: 350px;
     height: 35px;
@@ -94,7 +97,11 @@ position: absolute;
     margin-top: 5px;
 }
 
-#search input{
+#search2{
+	width: 250px;
+}
+
+#search input, #search2 input{
 	color: #EEE;
 	background-color: #4440;
 	font-size: 24px;
@@ -104,9 +111,63 @@ position: absolute;
 	text-shadow: 0 0 3px rgb(0, 0, 0);
 }
 
+#search2 input{
+	font-size: 14px;
+}
+
 input:focus{
 	border: 1px solid #81e7fc !important;
 	border-radius: 8px;
+}
+
+.search-box{
+    position: absolute;
+	display: inline-block;
+    top: 18px;
+    left: 320px;
+    height: 20px;
+	font-size: 12px;
+	color: #FFF;
+}
+
+#search-check span{
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    font-size: 16px;
+    font-weight: bold;
+	pointer-events: none;
+}
+
+.search-unchecked{
+	display: none;
+}
+
+#search-box2{
+	left: 450px;
+}
+
+#search-check{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 2px #787878;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 4px;
+}
+
+#search-check p{
+	position: relative;
+    top: 2px;
+    left: 30px;
+}
+
+#search-check2{
+	position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(68, 68, 68, 0.25);
+	box-shadow: 0px 0px 3px #000;
 }
 
 #left-bar{
@@ -123,6 +184,17 @@ input:focus{
     padding-right: 1px;
     border-radius: 4px;
     margin-left: 10px;
+	-webkit-mask-image: -webkit-gradient(
+	linear, left top, left bottom, 
+	color-stop(0.00,  rgba(0,0,0,0)),
+	color-stop(0.02,  rgba(0,0,0,1)),
+	color-stop(0.98,  rgba(0,0,0,1)),
+	color-stop(1.00,  rgba(0,0,0,0))),
+	-webkit-gradient(
+	linear, left top, right top, 
+	color-stop(0.00,  rgba(0,0,0,0)),
+	color-stop(0.93,  rgba(0,0,0,0)),
+	color-stop(1.00,  rgba(0,0,0,1)));
 }
 
 #bar-top{
@@ -157,10 +229,11 @@ input:focus{
 	overflow-y: scroll;
 	padding: 0px 5px;
 	padding-bottom: 50px;
+    padding-top: 5px;
 }
 
 .bar-act{
-position: relative;
+	position: relative;
     width: 100%;
     height: 70px;
     background-color: #171e26;
@@ -325,9 +398,21 @@ position: relative;
 
 #item-box{
 	position: relative;
+	margin-top: 28px;
 	width: 100%;
-	height: 100%;
+	height: calc(100% - 28px);
 	overflow-y: scroll;
+	-webkit-mask-image: -webkit-gradient(
+	linear, left top, left bottom, 
+	color-stop(0.00,  rgba(0,0,0,0)),
+	color-stop(0.02,  rgba(0,0,0,1)),
+	color-stop(0.98,  rgba(0,0,0,1)),
+	color-stop(1.00,  rgba(0,0,0,0))),
+	-webkit-gradient(
+	linear, left top, right top, 
+	color-stop(0.00,  rgba(0,0,0,0)),
+	color-stop(0.93,  rgba(0,0,0,0)),
+	color-stop(1.00,  rgba(0,0,0,1)));
 }
 
 .item-slot{
@@ -363,7 +448,7 @@ position: relative;
 #item-info-box{
 	position: relative;
 	width: 280px;
-	min-height: 350px;
+	min-height: 250px;
 	background-color: #edebe7;
 	padding-top: 65px;
     padding-bottom: 15px;
@@ -400,7 +485,7 @@ position: relative;
 #item-info-name{
     color: #fb4900;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 22px;
 	text-align: center;
 }
 
@@ -435,11 +520,23 @@ position: relative;
     padding: 0px 50px;
 }
 
+#item-info-description-artifact{
+	width: 100%;
+    color: #a99776;
+    font-size: 12px;
+    padding: 0px 25px;
+}
+
+#item-info-effect, #item-info-effectText{
+    font-size: 11px;
+	color: #000;
+	padding: 5px 15px;
+}
+
 #item-info-description-2{
     font-size: 12px;
 	color: #FFF;
 	padding: 10px 15px;
-	
 }
 
 .stats-left{
@@ -465,6 +562,10 @@ position: relative;
 .text-large{
 	font-size: 22px;
 	color: #a99776;
+}
+
+.hide-legendaries, .hide-artifacts{
+	display: none;
 }
 
 /* width */

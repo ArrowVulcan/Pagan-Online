@@ -103,4 +103,20 @@ let legendaryItemList = [
 		"special": "When Shield of the Righteous receives damage, heal yourself and all allies in an 8m radius for 15% of the damage received.",
 	},
 	
+	WitchdoctorsFeather = {
+		"name": "Witchdoctor's Feather",
+		"type": "Artifact",
+		"dots": "1",
+		"descriptionArtifact": "A cold? Eat onion. Next! Axe wound? Try this ointment. Next! Bogged down by Shroudspawn? Here. It is the Feather of the Witchdoctor. Don't mention it.",
+		"effect": "Movement Speed increased by 50% for 5 seconds after a critical hit.",
+	},
+	
+	PerunsShieldStrap = {
+		"name": "Perun's Shield Strap",
+		"type": "Artifact",
+		"dots": "1",
+		"descriptionArtifact": "Glory to the God of Thunder and Storm! Sacred is the earth he walks on, the mug he chugs ale from, his belt, his wineskin, his shield-strap...",
+		"effect": "11% chance to stun enemies for 1 second when receiving a hit.",
+	},
+	
 ]

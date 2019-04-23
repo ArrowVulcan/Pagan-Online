@@ -10,7 +10,7 @@ You can find the site here: https://arrowvulcan.github.io/Pagan-Online/
 
 <b>[Act II]</b> All are started
 
-<b>[Act III]</b> Empty
+<b>[Act III]</b> All are started
 
 <b>[Act IV]</b> Empty
 
