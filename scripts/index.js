@@ -192,17 +192,45 @@ let legendaryList = document.getElementsByClassName('item-slot');
 
 for (let i = 0; i < legendaryList.length; i++)
 {
+	legendaryList[i].addEventListener('mouseenter', function(e){
+
+		if( e.target.dataset.name ){
+			
+			let info = document.getElementById("item-info");
+			
+			info.style.top = 0 + "px";
+			info.style.left = 0 + "px";
+
+			info.style.opacity = "1";
+			
+		}
+
+	});
+	
 	legendaryList[i].addEventListener('mousemove', function(e){
 
 		if( e.target.dataset.name ){
 			
 			getLegendaries(e.target.dataset.name);
 			
+			// Get window dimensions
+			let windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			
 			let info = document.getElementById("item-info");
-			let imgWidth = 280;
-			info.style.display = "block";
-			info.style.top = e.pageY-50 + "px";
-			info.style.left = e.pageX-imgWidth-20 + "px";
+			let offset = info.offsetHeight;
+			let infoWidth = 280;
+			
+			if( e.pageY - 70 + offset >= windowHeight ){
+				
+				info.style.top = (windowHeight - offset - 10) + "px";
+				info.style.left = e.pageX - infoWidth - 20 + "px";
+				
+			}else{
+				
+				info.style.top = e.pageY - 80 + "px";
+				info.style.left = e.pageX - infoWidth - 20 + "px";
+			
+			}
 			
 		}
 
@@ -211,7 +239,7 @@ for (let i = 0; i < legendaryList.length; i++)
 	legendaryList[i].addEventListener('mouseleave', function(e){
 
 		let info = document.getElementById("item-info");
-		info.style.display = "";
+		info.style.opacity = "0";
 
 	});
 	

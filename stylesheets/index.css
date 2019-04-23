@@ -352,11 +352,12 @@ position: relative;
 
 #item-info{
 	position: absolute;
-	display: none;
 	right: 0px;
 	top: 0px;
 	pointer-events: none;
 	width: 280px;
+	opacity: 0;
+	transition: opacity 100ms linear;
 }
 
 #item-info-box{
