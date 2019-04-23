@@ -2,19 +2,22 @@
 
 A Pagan Online fansite that help you search for items drop location or legendary item informations.
 
-### STATUS
-
-[Act I] All are started.
-
-[Act II] All are started.
-
-[Act III] Empty
-
-[Act IV] Empty
-
-[Act V] "An Endless Spring" is started, everything else is empty.
-
 You can find the site here: https://arrowvulcan.github.io/Pagan-Online/
 
+### STATUS
+
+<b>[Act I]</b> All are started
+
+<b>[Act II]</b> All are started
+
+<b>[Act III]</b> Empty
+
+<b>[Act IV]</b> Empty
+
+<b>[Act V]</b> "An Endless Spring" is started, everything else is empty
+
+<b>[Legendaries]</b> Started
+
 ### Have any questions?
-You can find and message me on Reddit "ArrowVulcan" (https://www.reddit.com/user/ArrowVulcan/)
+You can find me on Reddit: "ArrowVulcan" (https://www.reddit.com/user/ArrowVulcan/) <br />
+or Discord: 애로우 발칸#8927

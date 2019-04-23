@@ -165,7 +165,7 @@ function itemSearch(event){
 			if( loot[j].name.toUpperCase().indexOf(filter) > -1 ){
 				let map = act2[i].firstElementChild.innerHTML;
 				let actName = act2[i].parentElement.parentElement.parentElement.previousSibling.previousSibling.innerText;
-				console.log( loot[j] );
+				
 				document.getElementById("dropList").innerHTML += '<p id="dropSearch" style="color: #' + loot[j].color + '">' + loot[j].name + ' - <i>' + map + ' (' + actName + ')</i></p>';
 			}
 		
