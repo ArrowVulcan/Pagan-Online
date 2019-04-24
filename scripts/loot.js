@@ -86,6 +86,7 @@ let InscribedShillelagh = {"name": "Inscribed Shillelagh", "color": base, "type"
 let InscribedStaff = {"name": "Inscribed Staff", "color": base, "type": "Weapon"};
 let OccultPole = {"name": "Occult Pole", "color": base, "type": "Weapon"};
 let RunicShillelagh = {"name": "Runic Shillelagh", "color": base, "type": "Weapon"};
+let ThaumaturgicShillelagh = {"name": "Thaumaturgic Shillelagh", "color": base, "type": "Weapon"};
 let WarpedStaff = {"name": "Warped Staff", "color": base, "type": "Weapon"};
 let WizardsKnout = {"name": "Wizards Knout", "color": base, "type": "Weapon"};
 let WizardsStaff = {"name": "Wizards Staff", "color": base, "type": "Weapon"};
@@ -100,6 +101,7 @@ let IronCudgel = {"name": "Iron Cudgel", "color": base, "type": "Weapon"};
 let IronMace = {"name": "Iron Mace", "color": base, "type": "Weapon"};
 let PridefulBlackjack = {"name": "Prideful Blackjack", "color": base, "type": "Weapon"};
 let RustyMace = {"name": "Rusty Mace", "color": base, "type": "Weapon"};
+let ZealousCudgel = {"name": "Zealous Cudgel", "color": base, "type": "Weapon"};
 
 // Weapon (Two-Handed Scythe)
 let BarbarianSlicer = {"name": "Barbarian Slicer", "color": base, "type": "Weapon"};
@@ -146,7 +148,9 @@ let SteelPendant = {"name": "Steel Pendant", "color": base, "type": "Amulet"};
 let SteelRiviere = {"name": "Steel Riviere", "color": base, "type": "Amulet"};
 
 // Ring
+let AstralRing = {"name": "Astral Ring", "color": base, "type": "Ring"};
 let CelestialRing = {"name": "Celestial Ring", "color": base, "type": "Ring"};
+let DestructionRing = {"name": "Destruction Ring", "color": base, "type": "Ring"};
 let DragonclawRing = {"name": "Dragonclaw Ring", "color": base, "type": "Ring"};
 let DrakeRing = {"name": "Drake Ring", "color": base, "type": "Ring"};
 let DreadRing = {"name": "Dread Ring", "color": base, "type": "Ring"};
@@ -189,6 +193,7 @@ let BronzeWard = {"name": "Bronze Ward", "color": base, "type": "Ward"};
 let DireAegis = {"name": "Dire Aegis", "color": base, "type": "Ward"};
 let DireWard = {"name": "Dire Ward", "color": base, "type": "Ward"};
 let EngravedGrimoire = {"name": "Engraved Grimoire", "color": base, "type": "Ward"};
+let EnhancedAegis = {"name": "Enhanced Aegis", "color": base, "type": "Ward"};
 let GrimAegis = {"name": "Grim Aegis", "color": base, "type": "Ward"};
 let GrimWard = {"name": "Grim Ward", "color": base, "type": "Ward"};
 let JaggedAegis = {"name": "Jagged Aegis", "color": base, "type": "Ward"};
@@ -221,6 +226,7 @@ let UncannyTome = {"name": "Uncanny Tome", "color": base, "type": "Tome"}
 
 // Crafting Material
 let AncestralArtifact = {"name": "Ancestral Artifact", "color": legendary, "type": "Crafting Material"};
+let AncientRelic = {"name": "Ancient Relic", "color": legendary, "type": "Crafting Material"};
 let ArborealShard = {"name": "Arboreal Shard", "color": epic, "type": "Crafting Material"};
 let ArchitecturalElement = {"name": "Architectural Element", "color": epic, "type": "Crafting Material"};
 let ArmorSegment = {"name": "Armor Segment", "color": epic, "type": "Crafting Material"};
@@ -231,8 +237,11 @@ let Brain = {"name": "Brain", "color": epic, "type": "Crafting Material"};
 let CapturedLightning = {"name": "Captured Lightning", "color": rare, "type": "Crafting Material"};
 let CelestialLight = {"name": "Celestial Light", "color": rare, "type": "Crafting Material"};
 let ConstructionPart = {"name": "Construction Part", "color": rare, "type": "Crafting Material"};
+let CosmicSpark = {"name": "Cosmic Spark", "color": legendary, "type": "Crafting Material"};
 let CrystallizedFire = {"name": "Crystallized Fire", "color": rare, "type": "Crafting Material"};
+let DivineParticle = {"name": "Divine Particle", "color": legendary, "type": "Crafting Material"};
 let DruidicGarment = {"name": "Druidic Garment", "color": legendary, "type": "Crafting Material"};
+let ElementalForce = {"name": "Elemental Force", "color": legendary, "type": "Crafting Material"};
 let EnchantedPyre = {"name": "Enchanted Pyre", "color": epic, "type": "Crafting Material"};
 let EnergyOrb = {"name": "Energy Orb", "color": rare, "type": "Crafting Material"};
 let GrowingRaiment = {"name": "Growing Raiment", "color": epic, "type": "Crafting Material"};
@@ -247,6 +256,7 @@ let SkeletalConstruct = {"name": "Skeletal Construct", "color": legendary, "type
 let Spine = {"name": "Spine", "color": epic, "type": "Crafting Material"};
 let StructuralReinforcement = {"name": "Structural Reinforcement", "color": rare, "type": "Crafting Material"};
 let SturdyTools = {"name": "Sturdy Tools", "color": rare, "type": "Crafting Material"};
+let SylvanCoat = {"name": "Sylvan Coat", "color": legendary, "type": "Crafting Material"};
 let Tissue = {"name": "Tissue", "color": rare, "type": "Crafting Material"};
 let WeaponFragment = {"name": "Weapon Fragment", "color": epic, "type": "Crafting Material"};
 
@@ -266,11 +276,15 @@ let WeaponRecipe_Rare = {"name": "Weapon Recipe", "color": rare, "type": "Recipe
 
 // Blueprint
 let BlueprintforAftershock = {"name": "Blueprint for Aftershock", "color": legendary, "type": "Blueprint"};
-let BlueprintForArcaneConduit = {"name": "Blueprint for Arcane Conduit", "color": legendary, "type": "Blueprint"};
+let BlueprintforArcaneConduit = {"name": "Blueprint for Arcane Conduit", "color": legendary, "type": "Blueprint"};
+let BlueprintforElementalSupremacy = {"name": "Blueprint for Elemental Supremacy", "color": legendary, "type": "Blueprint"};
+let BlueprintforNetherVeil = {"name": "Blueprint for Nether Veil", "color": legendary, "type": "Blueprint"};
+let BlueprintforNoWoundTooDeep = {"name": "Blueprint for No Wound Too Deep", "color": legendary, "type": "Blueprint"};
 let BlueprintforThunderingPulse = {"name": "Blueprint for Thundering Pulse", "color": legendary, "type": "Blueprint"};
 
 // Artifact
 let PerunsShieldStrap = {"name": "Perun's Shield Strap", "color": legendary, "type": "Artifact"};
+let StribogsTalisman = {"name": "Stribog's Talisman", "color": legendary, "type": "Artifact"};
 let WitchdoctorsFeather = {"name": "Witchdoctor's Feather", "color": legendary, "type": "Artifact"};
 
 // Shard
@@ -1059,7 +1073,7 @@ let Seekandyoushallfind = [
 
 let TheFruitofourToil = [
 	ArborealShard,
-	BlueprintForArcaneConduit,
+	BlueprintforArcaneConduit,
 	BottledGale,
 	CharmandTalismanRecipe_Rare,
 	ConstructionPart,
@@ -1264,6 +1278,250 @@ let TheMadGod = [
 	SkeletalConstruct,
 ]
 
+let EndTimes = [
+	BolsteredAegis,
+	BolsteredTalisman,
+	BolsteredWard,
+	BottledGale,
+	ConstructionPart,
+	DragonclawRing,
+	EnchantedPyre,
+	EnergyOrb,
+	HickoryManuballistas,
+	IchorousRing,
+	InfusedPole,
+	InfusedStaff,
+	InfusedTambourines,
+	IronBattleaxe,
+	IronBlackjack,
+	IronMace,
+	IronRipper,
+	IronSlicer,
+	IronValari,
+	IstokShard,
+	JaggedPelt,
+	MythicalGrimoire,
+	MythicalTome,
+	ResilientWood,
+	SilverAmulet,
+	SilverCharm,
+	SilverLavalier,
+	SilverLocket,
+	SilverNecklace,
+	SilverPendant,
+	SilverWard,
+	SkeletalConstruct,
+	SturdyTools,
+	TempestRing,
+	ThunderRing,
+	Tissue,
+	TomeandGrimoireRecipe_Rare,
+	WeaponFragment,
+	WeaponRecipe_Rare,
+]
+
+let HonorableRetreat = [
+	AmuletRecipe_Rare,
+	ArmorSegment,
+	BlueprintforElementalSupremacy,
+	BlueprintforNoWoundTooDeep,
+	BolsteredCharm,
+	BolsteredTalisman,
+	BolsteredWard,
+	BottledGale,
+	CharmandTalismanRecipe_Rare,
+	ElementalForce,
+	EnergyOrb,
+	GrowingRaiment,
+	HickoryManuballistas,
+	IchorousRing,
+	InfusedPole,
+	InfusedWhip,
+	JaggedPelt,
+	MorokhShard,
+	MythicalTome,
+	Organ,
+	PridefulAxe,
+	PridefulBlackjack,
+	PridefulBoomerang,
+	PridefulRipper,
+	ResilientWood,
+	SilverAmulet,
+	SilverLavalier,
+	SturdyTools,
+	TempestRing,
+	ThunderRing,
+	Tissue,
+	TomeandGrimoireRecipe_Epic,
+	TomeandGrimoireRecipe_Rare,
+	WeaponFragment,
+	WizardsKnout,
+	WizardsStaff,
+	WizardsTambourines,
+]
+
+let TheLastoftheirKind = [
+	BolsteredCharm,
+	BolsteredTalisman,
+	BolsteredWard,
+	Bone,
+	BottledGale,
+	CapturedLightning,
+	CharmandTalismanRecipe_Rare,
+	DragonclawRing,
+	EnchantedPyre,
+	EnergyOrb,
+	IchorousRing,
+	InfusedPole,
+	IronBattleaxe,
+	IronValari,
+	JaggedPelt,
+	KingewitchShard,
+	Limb,
+	MythicalGrimoire,
+	MythicalTome,
+	PridefulAxe,
+	PridefulBlackjack,
+	PridefulBoomerang,
+	PridefulRipper,
+	SilverAmulet,
+	SilverPendant,
+	SturdyTools,
+	Tissue,
+	TomeandGrimoireRecipe_Rare,
+	WardandGlyphRecipe_Rare,
+	WizardsKnout,
+	WizardsStaff,
+	WizardsTambourines,
+]
+
+let RemnantsofIgman = [
+	AncientRelic,
+	ArchitecturalElement,
+	BolsteredCharm,
+	BolsteredTalisman,
+	BottledGale,
+	DivineParticle,
+	EnergyOrb,
+	InfusedPole,
+	IronRipper,
+	JaggedPelt,
+	KingewitchShard,
+	MythicalGrimoire,
+	MythicalTome,
+	PridefulAxe,
+	RingRecipe_Rare,
+	SilverLavalier,
+	SilverLocket,
+	SilverPendant,
+	SturdyTools,
+	ThunderRing,
+	Tissue,
+	TomeandGrimoireRecipe_Rare,
+]
+
+let APlacetoStrife = [
+	AncestralArtifact,
+	AncientRelic,
+	BolsteredAegis,
+	BolsteredTalisman,
+	BolsteredWard,
+	Bone,
+	Brain,
+	CapturedLightning,
+	CharmandTalismanRecipe_Rare,
+	ConstructionPart,
+	CrystallizedFire,
+	DragonclawRing,
+	EnergyOrb,
+	GrowingRaiment,
+	IchorousRing,
+	InfusedLeather,
+	InfusedPole,
+	IronMace,
+	IronRipper,
+	IronValari,
+	MorokhShard,
+	MythicalGrimoire,
+	MythicalTome,
+	Organ,
+	PridefulRipper,
+	ResilientWood,
+	SilverAmulet,
+	SilverLavalier,
+	SilverLocket,
+	SilverPendant,
+	Spine,
+	StructuralReinforcement,
+	TempestRing,
+	ThunderRing,
+	Tissue,
+	WardandGlyphRecipe_Rare,
+	WizardsKnout,
+	WizardsStaff,
+	WizardsTambourines,
+]
+
+let BoggedDown = [
+	AmuletRecipe_Rare,
+	AncestralArtifact,
+	ArchitecturalElement,
+	BolsteredTalisman,
+	BolsteredWard,
+	CapturedLightning,
+	CelestialLight,
+	ConstructionPart,
+	CrystallizedFire,
+	DruidicGarment,
+	EnhancedGrimore,
+	InfusedLeather,
+	JaggedPelt,
+	LivingPlate,
+	MythicalTome,
+	PridefulAxe,
+	PridefulRipper,
+	ResilientWood,
+	SilverAmulet,
+	SilverLavalier,
+	SilverLocket,
+	SkeletalConstruct,
+	SturdyTools,
+	WeaponRecipe_Rare,
+	WizardsKnout,
+	WizardsStaff,
+	WizardsTambourines,
+]
+
+let ALakesWorthofWater = [
+	WizardsStaff,
+	WizardsKnout,
+	PridefulBoomerang,
+	StructuralReinforcement,
+	Tissue,
+	SilverPendant,
+	MythicalGrimoire,
+	SilverLavalier,
+	ResilientWood,
+	Organ,
+	InfusedLeather,
+	CrystallizedFire,
+	JaggedPelt,
+	PridefulBlackjack,
+	BolsteredWard,
+	EnhancedTalisman,
+	DruidicGarment,
+	ConstructionPart,
+	EnchantedPyre,
+	RingRecipe_Rare,
+	IstokShard,
+	CosmicSpark,
+	Bone,
+	WardandGlyphRecipe_Rare,
+	SilverAmulet,
+	SylvanCoat,
+	BlueprintforNetherVeil,
+]
+
 let AnEndlessSpring = [
 	AncestralArtifact,
 	AnyaShard,
@@ -1286,4 +1544,44 @@ let AnEndlessSpring = [
 	WizardsKnout,
 	WizardsStaff,
 	WizardsTambourines,
+]
+
+let RestlessRelentless = [
+	AncestralArtifact,
+	AstralRing,
+	BolsteredCharm,
+	Bone,
+	Brain,
+	CapturedLightning,
+	CharmandTalismanRecipe_Rare,
+	ConstructionPart,
+	CrystallizedFire,
+	DestructionRing,
+	ElementalForce,
+	EnergyOrb,
+	EnhancedAegis,
+	EnhancedGrimore,
+	EnhancedTalisman,
+	PridefulBlackjack,
+	StribogsTalisman,
+	SylvanCoat,
+	ThaumaturgicShillelagh,
+	Tissue,
+	WizardsStaff,
+	ZealousCudgel,
+]
+
+let TwilightofTheThunderGod = [
+	ArchitecturalElement,
+	ArmorSegment,
+	Bone,
+	BottledGale,
+	CapturedLightning,
+	ConstructionPart,
+	LivingPlate,
+	StructuralReinforcement,
+	SturdyTools,
+	Tissue,
+	WeaponFragment,
+	WeaponRecipe_Epic,
 ]
