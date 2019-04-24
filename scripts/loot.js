@@ -18,6 +18,8 @@ let BronzeBattleaxe = {"name": "Bronze Battleaxe", "color": base, "type": "Weapo
 let BronzeCleaver = {"name": "Bronze Cleaver", "color": base, "type": "Weapon"};
 let GladiatorsAxe = {"name": "Gladiator's Axe", "color": base, "type": "Weapon"};
 let IronAxe = {"name": "Iron Axe", "color": base, "type": "Weapon"};
+let IronBattleaxe = {"name": "Iron Battleaxe", "color": base, "type": "Weapon"};
+let IronCleaver = {"name": "Iron Cleaver", "color": base, "type": "Weapon"};
 let RustyCleaver = {"name": "Rusty Cleaver", "color": base, "type": "Weapon"};
 let StoneAxe = {"name": "Stone Axe", "color": base, "type": "Weapon"};
 let PridefulAxe = {"name": "Prideful Axe", "color": base, "type": "Weapon"};
@@ -30,6 +32,8 @@ let BronzeChakram = {"name": "Bronze Chakram", "color": base, "type": "Weapon"};
 let BronzeValari = {"name": "Bronze Valari", "color": base, "type": "Weapon"};
 let GladiatorsBoomerang = {"name": "Gladiators Boomerang", "color": base, "type": "Weapon"};
 let IronBoomerang = {"name": "Iron Boomerang", "color": base, "type": "Weapon"};
+let IronChakram = {"name": "Iron Chakram", "color": base, "type": "Weapon"};
+let IronValari = {"name": "Iron Valari", "color": base, "type": "Weapon"};
 let PridefulBoomerang = {"name": "Prideful Boomerang", "color": base, "type": "Weapon"};
 let RustyChakram = {"name": "Rusty Chakram", "color": base, "type": "Weapon"};
 let TribalChakram = {"name": "Tribal Chakram", "color": base, "type": "Weapon"};
@@ -45,6 +49,9 @@ let BambooManuballistas = {"name": "Bamboo Manuballistas", "color": base, "type"
 let BarbarianCrossbows = {"name": "Barbarian Crossbows", "color": base, "type": "Weapon"};
 let BoneManuballistas = {"name": "Bone Manuballistas", "color": base, "type": "Weapon"};
 let GladiatorsArbalests = {"name": "Gladiators Arbalests", "color": base, "type": "Weapon"};
+let HickoryArbalests = {"name": "Hickory Arbalests", "color": base, "type": "Weapon"};
+let HickoryCrossbows = {"name": "Hickory Crossbows", "color": base, "type": "Weapon"};
+let HickoryManuballistas = {"name": "Hickory Manuballistas", "color": base, "type": "Weapon"};
 let ObsidianArbalests = {"name": "Obsidian Arbalests", "color": base, "type": "Weapon"};
 let PridefulArbalests = {"name": "Prideful Arbalests", "color": base, "type": "Weapon"};
 let RustyManuballistas = {"name": "Rusty Manuballistas", "color": base, "type": "Weapon"};
@@ -57,6 +64,7 @@ let EngravedRiqs = {"name": "Engraved Riqs", "color": base, "type": "Weapon"};
 let EngravedTambourines = {"name": "Engraved Tambourines", "color": base, "type": "Weapon"};
 let HexingRiqs = {"name": "Hexing Riqs", "color": base, "type": "Weapon"};
 let InfusedDoyras = {"name": "Infused Doyras", "color": base, "type": "Weapon"};
+let InfusedTambourines = {"name": "Infused Tambourines", "color": base, "type": "Weapon"};
 let InscribedDoyras = {"name": "Inscribed Doyras", "color": base, "type": "Weapon"};
 let InscribedRiqs = {"name": "Inscribed Riqs", "color": base, "type": "Weapon"};
 let InscribedTambourines = {"name": "Inscribed Tambourines", "color": base, "type": "Weapon"};
@@ -71,7 +79,9 @@ let AttunedStaff = {"name": "Attuned Staff", "color": base, "type": "Weapon"};
 let EngravedPole = {"name": "Engraved Pole", "color": base, "type": "Weapon"};
 let EngravedShillelagh = {"name": "Engraved Shillelagh", "color": base, "type": "Weapon"};
 let EngravedStaff = {"name": "Engraved Staff", "color": base, "type": "Weapon"};
+let InfusedPole = {"name": "Infused Pole", "color": base, "type": "Weapon"};
 let InfusedShillelagh = {"name": "Infused Shillelagh", "color": base, "type": "Weapon"};
+let InfusedStaff = {"name": "Infused Staff", "color": base, "type": "Weapon"};
 let InscribedShillelagh = {"name": "Inscribed Shillelagh", "color": base, "type": "Weapon"};
 let InscribedStaff = {"name": "Inscribed Staff", "color": base, "type": "Weapon"};
 let OccultPole = {"name": "Occult Pole", "color": base, "type": "Weapon"};
@@ -85,7 +95,9 @@ let BronzeBlackjack = {"name": "Bronze Blackjack", "color": base, "type": "Weapo
 let BronzeCudgel = {"name": "Bronze Cudgel", "color": base, "type": "Weapon"};
 let BronzeMace = {"name": "Bronze Mace", "color": base, "type": "Weapon"};
 let GladiatorsBlackjack = {"name": "Gladiator's Blackjack", "color": base, "type": "Weapon"};
+let IronBlackjack = {"name": "Iron Blackjack", "color": base, "type": "Weapon"};
 let IronCudgel = {"name": "Iron Cudgel", "color": base, "type": "Weapon"};
+let IronMace = {"name": "Iron Mace", "color": base, "type": "Weapon"};
 let PridefulBlackjack = {"name": "Prideful Blackjack", "color": base, "type": "Weapon"};
 let RustyMace = {"name": "Rusty Mace", "color": base, "type": "Weapon"};
 
@@ -94,12 +106,16 @@ let BarbarianSlicer = {"name": "Barbarian Slicer", "color": base, "type": "Weapo
 let BronzeRipper = {"name": "Bronze Ripper", "color": base, "type": "Weapon"};
 let BronzeSlicer = {"name": "Bronze Slicer", "color": base, "type": "Weapon"};
 let GladiatorsRipper = {"name": "Gladiators Ripper", "color": base, "type": "Weapon"};
+let IronRipper = {"name": "Iron Ripper", "color": base, "type": "Weapon"};
 let IronScythe = {"name": "Iron Scythe", "color": base, "type": "Weapon"};
+let IronSlicer = {"name": "Iron Slicer", "color": base, "type": "Weapon"};
 let PridefulRipper = {"name": "Prideful Ripper", "color": base, "type": "Weapon"};
 
 // Weapon (One-Handed Whip)
 let EngravedWhip = {"name": "Engraved Whip", "color": base, "type": "Weapon"};
+let InfusedCord = {"name": "Infused Cord", "color": base, "type": "Weapon"};
 let InfusedKnout = {"name": "Infused Knout", "color": base, "type": "Weapon"};
+let InfusedWhip = {"name": "Infused Whip", "color": base, "type": "Weapon"};
 let InscribedCord = {"name": "Inscribed Cord", "color": base, "type": "Weapon"};
 let OccultCord = {"name": "Occult Cord", "color": base, "type": "Weapon"};
 let RunicWhip = {"name": "Runic Whip", "color": base, "type": "Weapon"};
@@ -114,9 +130,11 @@ let BronzeLocket = {"name": "Bronze Locket", "color": base, "type": "Amulet"};
 let BronzeNecklace = {"name": "Bronze Necklace", "color": base, "type": "Amulet"};
 let BronzePendant = {"name": "Bronze Pendant", "color": base, "type": "Amulet"};
 let BronzeRiviere = {"name": "Bronze Riviere", "color": base, "type": "Amulet"};
+let SilverAmulet = {"name": "Silver Amulet", "color": base, "type": "Amulet"};
 let SilverCarcanet = {"name": "Silver Carcanet", "color": base, "type": "Amulet"};
 let SilverLavalier = {"name": "Silver Lavalier", "color": base, "type": "Amulet"};
 let SilverLocket = {"name": "Silver Locket", "color": base, "type": "Amulet"};
+let SilverNecklace = {"name": "Silver Necklace", "color": base, "type": "Amulet"};
 let SilverRiviere = {"name": "Silver Riviere", "color": base, "type": "Amulet"};
 let SilverPendant = {"name": "Silver Pendant", "color": base, "type": "Amulet"};
 let SteelAmulet = {"name": "Steel Amulet", "color": base, "type": "Amulet"};
@@ -129,14 +147,18 @@ let SteelRiviere = {"name": "Steel Riviere", "color": base, "type": "Amulet"};
 
 // Ring
 let CelestialRing = {"name": "Celestial Ring", "color": base, "type": "Ring"};
+let DragonclawRing = {"name": "Dragonclaw Ring", "color": base, "type": "Ring"};
 let DrakeRing = {"name": "Drake Ring", "color": base, "type": "Ring"};
 let DreadRing = {"name": "Dread Ring", "color": base, "type": "Ring"};
 let EvocatorRing = {"name": "Evocator Ring", "color": base, "type": "Ring"};
 let FrostRing = {"name": "Frost Ring", "color": base, "type": "Ring"};
 let FrozenRing = {"name": "Frozen Ring", "color": base, "type": "Ring"};
+let IchorousRing = {"name": "Ichorous Ring", "color": base, "type": "Ring"};
 let PainRing = {"name": "Pain Ring", "color": base, "type": "Ring"};
 let SpectralRing = {"name": "Spectral Ring", "color": base, "type": "Ring"};
 let SpitefulRing = {"name": "Spiteful Ring", "color": base, "type": "Ring"};
+let ThunderRing = {"name": "Thunder Ring", "color": base, "type": "Ring"};
+let TempestRing = {"name": "Tempest Ring", "color": base, "type": "Ring"};
 let VenomRing = {"name": "Venom Ring", "color": base, "type": "Ring"};
 let WyvernRing = {"name": "Wyvern Ring", "color": base, "type": "Ring"};
 
@@ -152,6 +174,7 @@ let GrimCharm = {"name": "Grim Charm", "color": base, "type": "Charm"}
 let GrimTalisman = {"name": "Grim Talisman", "color": base, "type": "Charm"};
 let JaggedCharm = {"name": "Jagged Charm", "color": base, "type": "Charm"};
 let JaggedTalisman = {"name": "Jagged Talisman", "color": base, "type": "Charm"};
+let SilverCharm = {"name": "Silver Charm", "color": base, "type": "Charm"};
 let SilverTalisman = {"name": "Silver Talisman", "color": base, "type": "Charm"};
 let SteelTalisman = {"name": "Steel Talisman", "color": base, "type": "Charm"};
 let SturdyCharm = {"name": "Sturdy Charm", "color": base, "type": "Charm"};
@@ -159,6 +182,7 @@ let SturdyTalisman = {"name": "Sturdy Talisman", "color": base, "type": "Charm"}
 
 // Ward
 let ArmoredWard = {"name": "Armored Ward", "color": base, "type": "Ward"};
+let BolsteredAegis = {"name": "Bolstered Aegis", "color": base, "type": "Ward"};
 let BolsteredWard = {"name": "Bolstered Ward", "color": base, "type": "Ward"};
 let BronzeAegis = {"name": "Bronze Aegis", "color": base, "type": "Ward"};
 let BronzeWard = {"name": "Bronze Ward", "color": base, "type": "Ward"};
@@ -169,6 +193,7 @@ let GrimAegis = {"name": "Grim Aegis", "color": base, "type": "Ward"};
 let GrimWard = {"name": "Grim Ward", "color": base, "type": "Ward"};
 let JaggedAegis = {"name": "Jagged Aegis", "color": base, "type": "Ward"};
 let SilverAegis = {"name": "Silver Aegis", "color": base, "type": "Ward"};
+let SilverWard = {"name": "Silver Ward", "color": base, "type": "Ward"};
 let SteelAegis = {"name": "Steel Aegis", "color": base, "type": "Ward"};
 let SteelWard = {"name": "Steel Ward", "color": base, "type": "Ward"};
 let SturdyAegis = {"name": "Sturdy Aegis", "color": base, "type": "Ward"};
@@ -216,7 +241,9 @@ let JaggedPelt = {"name": "Jagged Pelt", "color": rare, "type": "Crafting Materi
 let Limb = {"name": "Limb", "color": epic, "type": "Crafting Material"};
 let LivingPlate = {"name": "Living Plate", "color": epic, "type": "Crafting Material"};
 let Organ = {"name": "Organ", "color": rare, "type": "Crafting Material"};
+let RangersGear = {"name": "Ranger's Gear", "color": legendary, "type": "Crafting Material"};
 let ResilientWood = {"name": "Resilient Wood", "color": rare, "type": "Crafting Material"};
+let SkeletalConstruct = {"name": "Skeletal Construct", "color": legendary, "type": "Crafting Material"};
 let Spine = {"name": "Spine", "color": epic, "type": "Crafting Material"};
 let StructuralReinforcement = {"name": "Structural Reinforcement", "color": rare, "type": "Crafting Material"};
 let SturdyTools = {"name": "Sturdy Tools", "color": rare, "type": "Crafting Material"};
@@ -239,6 +266,7 @@ let WeaponRecipe_Rare = {"name": "Weapon Recipe", "color": rare, "type": "Recipe
 
 // Blueprint
 let BlueprintforAftershock = {"name": "Blueprint for Aftershock", "color": legendary, "type": "Blueprint"};
+let BlueprintForArcaneConduit = {"name": "Blueprint for Arcane Conduit", "color": legendary, "type": "Blueprint"};
 let BlueprintforThunderingPulse = {"name": "Blueprint for Thundering Pulse", "color": legendary, "type": "Blueprint"};
 
 // Artifact
@@ -1004,6 +1032,236 @@ let Dragonslayer = [
 	SturdyTools,
 	Tissue,
 	WeaponRecipe_Epic,
+]
+
+let Seekandyoushallfind = [
+	ArborealShard,
+	ArmorSegment,
+	Brain,
+	CapturedLightning,
+	CrystallizedFire,
+	HickoryArbalests,
+	HickoryCrossbows,
+	InfusedLeather,
+	InscribedShillelagh,
+	IronChakram,
+	IronCleaver,
+	IstokShard,
+	OminousGrimoire,
+	OminousTome,
+	Organ,
+	SilverCharm,
+	SilverNecklace,
+	SilverTalisman,
+	SilverWard,
+	Spine,
+]
+
+let TheFruitofourToil = [
+	ArborealShard,
+	BlueprintForArcaneConduit,
+	BottledGale,
+	CharmandTalismanRecipe_Rare,
+	ConstructionPart,
+	EnergyOrb,
+	InfusedCord,
+	InfusedDoyras,
+	InfusedLeather,
+	InfusedShillelagh,
+	InfusedStaff,
+	IronAxe,
+	IronBlackjack,
+	IronCleaver,
+	IronCudgel,
+	IronScythe,
+	IronSlicer,
+	KingewitchShard,
+	OminousGrimoire,
+	OminousTome,
+	Organ,
+	SilverNecklace,
+	SilverTalisman,
+	SilverWard,
+	Spine,
+	StructuralReinforcement,
+	Tissue,
+	TomeandGrimoireRecipe_Epic,
+	WeaponRecipe_Rare,
+]
+
+let DrinktotheGods = [
+	AmuletRecipe_Rare,
+	AnyaShard,
+	ArborealShard,
+	ArchitecturalElement,
+	Biomass,
+	BolsteredAegis,
+	Bone,
+	BottledGale,
+	Brain,
+	CapturedLightning,
+	CelestialLight,
+	ConstructionPart,
+	CrystallizedFire,
+	DragonclawRing,
+	EnergyOrb,
+	HickoryArbalests,
+	HickoryManuballistas,
+	IchorousRing,
+	InfusedLeather,
+	InfusedPole,
+	InfusedStaff,
+	InfusedWhip,
+	IronBattleaxe,
+	IronChakram,
+	IronCleaver,
+	IronRipper,
+	JaggedPelt,
+	KingewitchShard,
+	Limb,
+	OminousTome,
+	Organ,
+	ResilientWood,
+	SilverCarcanet,
+	SilverCharm,
+	SilverNecklace,
+	SilverRiviere,
+	SilverWard,
+	Spine,
+	StructuralReinforcement,
+	SturdyTools,
+	TempestRing,
+	ThunderRing,
+	TomeandGrimoireRecipe_Rare,
+	WardandGlyphRecipe_Epic,
+	WeaponRecipe_Rare,
+]
+
+let OnefortheRoad = [
+	AmuletRecipe_Rare,
+	Bone,
+	Brain,
+	CapturedLightning,
+	CelestialLight,
+	CharmandTalismanRecipe_Rare,
+	CrystallizedFire,
+	DragonclawRing,
+	IchorousRing,
+	InfusedCord,
+	InfusedLeather,
+	InfusedPole,
+	InfusedStaff,
+	InfusedTambourines,
+	InfusedWhip,
+	IronBattleaxe,
+	IronMace,
+	IronRipper,
+	IronSlicer,
+	IstokShard,
+	OminousTome,
+	Organ,
+	ResilientWood,
+	SilverCarcanet,
+	SilverCharm,
+	SilverRiviere,
+	SilverWard,
+	Spine,
+	StructuralReinforcement,
+	ThunderRing,
+	WeaponRecipe_Rare,
+]
+
+let AQuestionTooMany = [
+	ArborealShard,
+	ArchitecturalElement,
+	BolsteredAegis,
+	CrystallizedFire,
+	DragonclawRing,
+	EnchantedPyre,
+	EnergyOrb,
+	HickoryManuballistas,
+	IchorousRing,
+	InfusedLeather,
+	InfusedPole,
+	InfusedStaff,
+	InfusedWhip,
+	IronBlackjack,
+	IronChakram,
+	IronMace,
+	IronValari,
+	IstokShard,
+	JaggedPelt,
+	Organ,
+	ResilientWood,
+	SilverCarcanet,
+	SilverNecklace,
+	SilverRiviere,
+	SilverWard,
+	StructuralReinforcement,
+	TempestRing,
+	ThunderRing,
+	WardandGlyphRecipe_Rare,
+	WeaponRecipe_Rare,
+]
+
+let APrisonofYourOwnMaking = [
+	ArmorSegment,
+	BolsteredAegis,
+	BolsteredTalisman,
+	CapturedLightning,
+	CrystallizedFire,
+	EnchantedPyre,
+	InfusedLeather,
+	InfusedPole,
+	InfusedStaff,
+	IronRipper,
+	IronSlicer,
+	IstokShard,
+	MythicalGrimoire,
+	Organ,
+	RangersGear,
+	SilverAmulet,
+	SilverLocket,
+	SilverPendant,
+	SilverWard,
+	Spine,
+	StructuralReinforcement,
+	SturdyTools,
+	TempestRing,
+]
+
+let TroubleinParadise = [
+	ArborealShard,
+	BolsteredAegis,
+	BolsteredTalisman,
+	CelestialLight,
+	CrystallizedFire,
+	EnergyOrb,
+	InfusedStaff,
+	IronChakram,
+	IronRipper,
+	LivingPlate,
+	Organ,
+	ResilientWood,
+	SilverCharm,
+	SilverNecklace,
+	StructuralReinforcement,
+	WeaponRecipe_Epic,
+]
+
+let TheMadGod = [
+	ThunderRing,
+	EnergyOrb,
+	StructuralReinforcement,
+	ConstructionPart,
+	EnchantedPyre,
+	LivingPlate,
+	IronRipper,
+	ResilientWood,
+	Limb,
+	Bone,
+	SilverCharm,
+	SkeletalConstruct,
 ]
 
 let AnEndlessSpring = [
