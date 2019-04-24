@@ -152,6 +152,56 @@ let legendaryItemList = [
 		"special": "",
 	},
 	
+	NetherVeil = {
+		"might": "1.3K",
+		"name": "Nether Veil",
+		"type": "Ward",
+		"quality": "Common",
+		"level": "18",
+		"dots": "2",
+		bonus: {
+			"Armor Rating": "213",
+			"Evasion Rating": "492",
+		},
+		bonus2: {
+			"Dexterity": "57",
+			"Evasion Rating": "303",
+			"Bonus Health": "47%",
+			"Critical Chance Bonus": "31.0%",
+			"Physical DMG": "0-1",
+		},
+		rank: {
+			"Required Legacy Rank": "3",
+		},
+		"description": "The Underworld is not a place to be taken lightly, and reaching it without dying requires evading supernatural gatekeeepers. There are tools for this.",
+		"special": "Health potions replenish 100% of your resource pool.",
+	},
+	
+	Leviathan = {
+		"might": "501",
+		"name": "Leviathan",
+		"type": "Tome",
+		"quality": "Common",
+		"level": "17",
+		"dots": "2",
+		bonus: {
+			"Armor Rating": "182",
+			"Evasion Rating": "84",
+		},
+		bonus2: {
+			"Armor Rating Bonus": "16.0%",
+			"Cold Resistance": "20%",
+			"Attack Damage Bonus": "28.0%",
+			"Physical DMG Bonus": "30.0%",
+			"Poison DMG Bonus": "30.0%",
+		},
+		rank: {
+			"Required Legacy Rank": "3",
+		},
+		"description": "Here is Leviathan, lawmaker and lawbreaker, talisman of the fortunate and toppler of kingdoms. Dabog claims it as his own... I could be persuaded to sell it.",
+		"special": "",
+	},
+	
 	/* ####################
 	Artifacts
 	#################### */

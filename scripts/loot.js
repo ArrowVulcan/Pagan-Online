@@ -94,6 +94,7 @@ let WizardsKnout = {"name": "Wizards Knout", "color": base, "type": "Weapon"};
 let WizardsStaff = {"name": "Wizards Staff", "color": base, "type": "Weapon"};
 
 // Weapon (One-Handed Blunt)
+let BarbarianCudgel = {"name": "Barbarian Cudgel", "color": base, "type": "Weapon"};
 let BronzeBlackjack = {"name": "Bronze Blackjack", "color": base, "type": "Weapon"};
 let BronzeCudgel = {"name": "Bronze Cudgel", "color": base, "type": "Weapon"};
 let BronzeMace = {"name": "Bronze Mace", "color": base, "type": "Weapon"};
@@ -294,6 +295,7 @@ let BlueprintforNoWoundTooDeep = {"name": "Blueprint for No Wound Too Deep", "co
 let BlueprintforThunderingPulse = {"name": "Blueprint for Thundering Pulse", "color": legendary, "type": "Blueprint"};
 
 // Artifact
+let AnimalHeartRabbit = {"name": "Animal Heart: Rabbit", "color": legendary, "type": "Artifact"};
 let PerunsShieldStrap = {"name": "Perun's Shield Strap", "color": legendary, "type": "Artifact"};
 let StribogsTalisman = {"name": "Stribog's Talisman", "color": legendary, "type": "Artifact"};
 let WitchdoctorsFeather = {"name": "Witchdoctor's Feather", "color": legendary, "type": "Artifact"};
@@ -932,21 +934,38 @@ let NatureDeserted = [
 ]
 
 let TheSacrifice = [
+	ArmorSegment,
+	ArmoredWard,
+	BarbarianCrossbows,
+	BarbarianCudgel,
+	Brain,
+	CelestialLight,
 	CrystallizedFire,
 	DreadRing,
+	EvocatorRing,
 	GladiatorsAxe,
+	GladiatorsRipper,
+	IlluminatingGrimoire,
 	InfusedLeather,
 	JaggedAegis,
 	JaggedCharm,
+	JaggedTalisman,
+	KingewitchShard,
 	MorokhShard,
 	Organ,
 	PerunsShieldStrap,
 	ResilientWood,
 	RingRecipe_Epic,
+	RingRecipe_Rare,
 	RunicRiqs,
 	RunicShillelagh,
+	RunicWhip,
+	Spine,
+	StructuralReinforcement,
 	TomeandGrimoireRecipe_Rare,
+	WardandGlyphRecipe_Epic,
 	WardandGlyphRecipe_Rare,
+	WarpedKnout,
 	WarpedStaff,
 	WeaponRecipe_Rare,
 ]
@@ -971,6 +990,10 @@ let SeedlingsofVeles = [
 	StructuralReinforcement,
 	TomeandGrimoireRecipe_Rare,
 	WardandGlyphRecipe_Epic,
+	RunicRiqs,
+	JaggedTalisman,
+	ArborealShard,
+	AnimalHeartRabbit,
 ]
 
 let EntranceoftheConflagration = [
