@@ -79,9 +79,11 @@ let AttunedStaff = {"name": "Attuned Staff", "color": base, "type": "Weapon"};
 let EngravedPole = {"name": "Engraved Pole", "color": base, "type": "Weapon"};
 let EngravedShillelagh = {"name": "Engraved Shillelagh", "color": base, "type": "Weapon"};
 let EngravedStaff = {"name": "Engraved Staff", "color": base, "type": "Weapon"};
+let HexingShillelagh = {"name": "Hexing Shillelagh", "color": base, "type": "Weapon"};
 let InfusedPole = {"name": "Infused Pole", "color": base, "type": "Weapon"};
 let InfusedShillelagh = {"name": "Infused Shillelagh", "color": base, "type": "Weapon"};
 let InfusedStaff = {"name": "Infused Staff", "color": base, "type": "Weapon"};
+let InscribedPole = {"name": "Inscribed Pole", "color": base, "type": "Weapon"};
 let InscribedShillelagh = {"name": "Inscribed Shillelagh", "color": base, "type": "Weapon"};
 let InscribedStaff = {"name": "Inscribed Staff", "color": base, "type": "Weapon"};
 let OccultPole = {"name": "Occult Pole", "color": base, "type": "Weapon"};
@@ -101,11 +103,13 @@ let IronCudgel = {"name": "Iron Cudgel", "color": base, "type": "Weapon"};
 let IronMace = {"name": "Iron Mace", "color": base, "type": "Weapon"};
 let PridefulBlackjack = {"name": "Prideful Blackjack", "color": base, "type": "Weapon"};
 let RustyMace = {"name": "Rusty Mace", "color": base, "type": "Weapon"};
+let StoneMace = {"name": "Stone Mace", "color": base, "type": "Weapon"};
 let ZealousCudgel = {"name": "Zealous Cudgel", "color": base, "type": "Weapon"};
 
 // Weapon (Two-Handed Scythe)
 let BarbarianSlicer = {"name": "Barbarian Slicer", "color": base, "type": "Weapon"};
 let BronzeRipper = {"name": "Bronze Ripper", "color": base, "type": "Weapon"};
+let BronzeScythe = {"name": "Bronze Scythe", "color": base, "type": "Weapon"};
 let BronzeSlicer = {"name": "Bronze Slicer", "color": base, "type": "Weapon"};
 let GladiatorsRipper = {"name": "Gladiators Ripper", "color": base, "type": "Weapon"};
 let IronRipper = {"name": "Iron Ripper", "color": base, "type": "Weapon"};
@@ -114,11 +118,16 @@ let IronSlicer = {"name": "Iron Slicer", "color": base, "type": "Weapon"};
 let PridefulRipper = {"name": "Prideful Ripper", "color": base, "type": "Weapon"};
 
 // Weapon (One-Handed Whip)
+let AttunedKnout = {"name": "Attuned Knout", "color": base, "type": "Weapon"};
+let EngravedCord = {"name": "Engraved Cord", "color": base, "type": "Weapon"};
+let EngravedKnout = {"name": "Engraved Knout", "color": base, "type": "Weapon"};
 let EngravedWhip = {"name": "Engraved Whip", "color": base, "type": "Weapon"};
+let HexingWhip = {"name": "Hexing Whip", "color": base, "type": "Weapon"};
 let InfusedCord = {"name": "Infused Cord", "color": base, "type": "Weapon"};
 let InfusedKnout = {"name": "Infused Knout", "color": base, "type": "Weapon"};
 let InfusedWhip = {"name": "Infused Whip", "color": base, "type": "Weapon"};
 let InscribedCord = {"name": "Inscribed Cord", "color": base, "type": "Weapon"};
+let InscribedWhip = {"name": "Inscribed Whip", "color": base, "type": "Weapon"};
 let OccultCord = {"name": "Occult Cord", "color": base, "type": "Weapon"};
 let RunicWhip = {"name": "Runic Whip", "color": base, "type": "Weapon"};
 let ShiftingCord = {"name": "Shifting Cord", "color": base, "type": "Weapon"};
@@ -150,6 +159,7 @@ let SteelRiviere = {"name": "Steel Riviere", "color": base, "type": "Amulet"};
 // Ring
 let AstralRing = {"name": "Astral Ring", "color": base, "type": "Ring"};
 let CelestialRing = {"name": "Celestial Ring", "color": base, "type": "Ring"};
+let ChargeRing = {"name": "Charge Ring", "color": base, "type": "Ring"};
 let DestructionRing = {"name": "Destruction Ring", "color": base, "type": "Ring"};
 let DragonclawRing = {"name": "Dragonclaw Ring", "color": base, "type": "Ring"};
 let DrakeRing = {"name": "Drake Ring", "color": base, "type": "Ring"};
@@ -278,6 +288,7 @@ let WeaponRecipe_Rare = {"name": "Weapon Recipe", "color": rare, "type": "Recipe
 let BlueprintforAftershock = {"name": "Blueprint for Aftershock", "color": legendary, "type": "Blueprint"};
 let BlueprintforArcaneConduit = {"name": "Blueprint for Arcane Conduit", "color": legendary, "type": "Blueprint"};
 let BlueprintforElementalSupremacy = {"name": "Blueprint for Elemental Supremacy", "color": legendary, "type": "Blueprint"};
+let BlueprintforMoranasLonging = {"name": "Blueprint for Morana's Longing", "color": legendary, "type": "Blueprint"};
 let BlueprintforNetherVeil = {"name": "Blueprint for Nether Veil", "color": legendary, "type": "Blueprint"};
 let BlueprintforNoWoundTooDeep = {"name": "Blueprint for No Wound Too Deep", "color": legendary, "type": "Blueprint"};
 let BlueprintforThunderingPulse = {"name": "Blueprint for Thundering Pulse", "color": legendary, "type": "Blueprint"};
@@ -387,23 +398,43 @@ let DukatsInstructions = [
 ]
 
 let ThePrayers = [
+	ArchitecturalElement,
 	ArmorSegment,
 	Bone,
 	Brain,
 	CapturedLightning,
+	ChargeRing,
 	ConstructionPart,
+	CrystallizedFire,
 	DireCharm,
 	DrakeRing,
+	EnchantedPyre,
 	FrostRing,
+	GrimTalisman,
 	GrimWard,
 	HexingRiqs,
+	HexingShillelagh,
+	HexingWhip,
+	InscribedPole,
 	InscribedTambourines,
+	InscribedWhip,
+	IstokShard,
 	LukianShard,
+	ResilientWood,
+	RingRecipe_Rare,
+	SteelAmulet,
 	SteelLavalier,
 	SteelPendant,
+	StoneMace,
 	TomeandGrimoireRecipe_Rare,
 	UncannyGrimoire,
+	VenomRing,
 	WeaponRecipe_Rare,
+	SteelLocket,
+	ArborealShard,
+	LivingPlate,
+	Spine,
+	JaggedPelt,
 ]
 
 let FollowersofDabog = [
@@ -486,8 +517,11 @@ let TheGreatHall = [
 ]
 
 let TempleofCorruption = [
+	AttunedKnout,
 	AttunedTambourines,
 	Bone,
+	BronzeAegis,
+	BronzeAxe,
 	BronzeCharm,
 	BronzeCudgel,
 	BronzeTalisman,
@@ -495,41 +529,97 @@ let TempleofCorruption = [
 	ConstructionPart,
 	EnchantedPyre,
 	EngravedDoyras,
+	EngravedKnout,
 	GhastlyGrimoire,
+	MorokhShard,
 	ObsidianArbalests,
+	Organ,
 	ResilientWood,
+	TomeandGrimoireRecipe_Rare,
+	WardandGlyphRecipe_Epic,
+	WeaponRecipe_Epic,
+	WeaponRecipe_Rare,
 ]
 
 let TheKingofNothing = [
+	AmuletRecipe_Epic,
+	AnyaShard,
 	ArchitecturalElement,
+	ArmorSegment,
+	BambooArbalests,
+	BlueprintforMoranasLonging,
 	Bone,
 	Brain,
 	BronzeAegis,
+	BronzeAxe,
+	BronzeCarcanet,
 	BronzeCharm,
+	BronzeCleaver,
 	BronzeRiviere,
+	BronzeScythe,
+	BronzeSlicer,
 	BronzeTalisman,
 	BronzeWard,
+	CapturedLightning,
+	CharmandTalismanRecipe_Rare,
 	ConstructionPart,
 	CrystallizedFire,
 	EnchantedPyre,
+	EngravedCord,
 	EngravedDoyras,
+	EngravedKnout,
 	EngravedRiqs,
+	EngravedStaff,
 	GhastlyGrimoire,
 	GhastlyTome,
+	InfusedLeather,
+	IstokShard,
 	JaggedPelt,
+	Limb,
+	LivingPlate,
+	Organ,
 	ResilientWood,
+	SkeletalConstruct,
 	TomeandGrimoireRecipe_Epic,
 	WeaponRecipe_Epic,
 	WeaponRecipe_Rare,
 ]
 
 let SiegeSurvival = [
+	AnyaShard,
+	BambooArbalests,
+	BewitchingTome,
+	BronzeAegis,
+	BronzeBlackjack,
+	BronzeBoomerang,
+	BronzeCarcanet,
+	BronzeCharm,
+	BronzeCudgel,
+	BronzeNecklace,
+	BronzeRiviere,
 	BronzeTalisman,
 	BronzeWard,
+	CharmandTalismanRecipe_Rare,
+	ConstructionPart,
+	CrystallizedFire,
+	EnergyOrb,
+	EngravedCord,
 	EngravedDoyras,
+	EngravedKnout,
+	EngravedRiqs,
 	EngravedShillelagh,
+	EngravedStaff,
+	GhastlyGrimoire,
+	GhastlyTome,
+	InfusedLeather,
 	JaggedPelt,
+	LukianShard,
+	RingRecipe_Rare,
+	Spine,
+	SturdyTools,
 	Tissue,
+	WeaponFragment,
+	WeaponRecipe_Rare,
 ]
 
 let Blotoutthemoonlight = [
