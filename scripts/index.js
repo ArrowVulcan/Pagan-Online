@@ -104,6 +104,10 @@ for (let i = 0; i < acts2.length; i++){
 			document.getElementById("drop" + items[i].type.replace(/\s/g, "")).innerHTML += '<div class="dropItem" style="color: #' + items[i].color + '">' + items[i].name + '</div>';
 
 		}
+		
+		//getDropListItems();
+		// Add listener to items
+		getDropItem('dropItem');
 
 	});
 	
@@ -199,13 +203,16 @@ function itemSearch(event){
 				let map = act2[i].firstElementChild.innerHTML;
 				let actName = act2[i].parentElement.parentElement.parentElement.previousSibling.previousSibling.innerText;
 				
-				document.getElementById("dropList").innerHTML += '<p id="dropSearch" style="color: #' + loot[j].color + '">' + loot[j].name + ' - <i>' + map + ' (' + actName + ')</i></p>';
+				document.getElementById("dropList").innerHTML += '<p class="dropSearch" style="color: #' + loot[j].color + '">' + loot[j].name + ' - ' + map + ' (' + actName + ')</p>';
 			}
 		
 		
 		}
 		
 	}
+	
+	// Add listener to items
+	getDropItem('dropSearch');
 	
 }
 
@@ -296,18 +303,20 @@ for (let i = 0; i < legendaryList.length; i++)
 			// Get window dimensions
 			let windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 			
+			let scrollTop = document.body.scrollTop;
+			
 			let info = document.getElementById("item-info");
 			let offset = info.offsetHeight;
 			let infoWidth = 280;
 			
 			if( e.pageY - 70 + offset >= windowHeight ){
 				
-				info.style.top = (windowHeight - offset - 10) + "px";
+				info.style.top = (windowHeight - offset - 10) + scrollTop + "px";
 				info.style.left = e.pageX - infoWidth - 20 + "px";
 				
 			}else{
 				
-				info.style.top = e.pageY - 80 + "px";
+				info.style.top = e.pageY - 80 + scrollTop + "px";
 				info.style.left = e.pageX - infoWidth - 20 + "px";
 			
 			}
@@ -325,17 +334,99 @@ for (let i = 0; i < legendaryList.length; i++)
 	
 }
 
-function getLegendaries(item){
+function getDropItem(targ){
+	
+
+	let dropItem = document.getElementsByClassName(targ);
+	
+	for (let i = 0; i < dropItem.length; i++){
+
+		dropItem[i].addEventListener('mouseenter', function(e){
+			
+			let info = document.getElementById("item-info");
+			
+			info.style.top = 0 + "px";
+			info.style.left = 0 + "px";
+
+			info.style.opacity = "1";
+
+		});
+		
+		dropItem[i].addEventListener('mousemove', function(e){
+
+			let itemName = e.target.innerText.split(" - ")[0];
+			
+			let itemObject;
+			
+			try {
+				
+				if( e.target.style.color == "rgb(0, 232, 255)" ){
+					itemName = itemName.replace("Recipe",'Recipe_Rare');
+				}else if( e.target.style.color == "rgb(255, 0, 255)" ){
+					itemName = itemName.replace("Recipe",'Recipe_Epic');
+				}
+
+				itemObject = eval( itemName.replace(/ /g,'') );
+			}
+			catch(err) {
+				//console.log( "error");
+			}
+			
+			getLegendaries(itemObject, true);
+			
+			// Get window dimensions
+			let windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			
+			let scrollTop = document.body.scrollTop;
+			
+			let info = document.getElementById("item-info");
+			let offset = info.offsetHeight;
+			let infoWidth = 280;
+			
+			if( e.pageY - 70 + offset >= windowHeight ){
+				
+				info.style.top = (windowHeight - offset - 10) + scrollTop + "px";
+				info.style.left = e.pageX - infoWidth - 20 + "px";
+				
+			}else{
+				
+				info.style.top = e.pageY - 80 + scrollTop + "px";
+				info.style.left = e.pageX - infoWidth - 20 + "px";
+			
+			}	
+
+		});
+		
+		dropItem[i].addEventListener('mouseleave', function(e){
+
+			let info = document.getElementById("item-info");
+			info.style.opacity = "0";
+
+		});
+
+	}
+
+}
+
+function getLegendaries(item, searched){
 	
 	let list;
 	
-	for(let i = 0; i < Object.values(legendaryItemList).length; i++){
+	if( searched ){
 		
-		if(Object.values(legendaryItemList)[i].name == item){
-			list = legendaryItemList[i];
-			break;
+		list = item;
+		
+	}else{
+	
+		for(let i = 0; i < Object.values(legendaryItemList).length; i++){
+			
+			if(Object.values(legendaryItemList)[i].name == item){
+				list = legendaryItemList[i];
+				break;
+			}
+			
 		}
-		
+	
 	}
 	
 	if(!list){ return false };
@@ -345,6 +436,8 @@ function getLegendaries(item){
 		// Clear old info
 		document.getElementById("item-info-dots").innerHTML = "";
 		document.getElementById("item-info-box").style.paddingTop = "15px";
+		
+		document.getElementById("item-info-name").style.color = "#e45010";
 		
 		let legendaryList = document.getElementsByClassName("item-legendary");
 		for (let i = 0; i < legendaryList.length; i++){
@@ -369,6 +462,76 @@ function getLegendaries(item){
 		document.getElementById("item-info-effectText").firstElementChild.innerText = "Artefact effect on crafted gear:";
 		document.getElementById("item-info-effect").firstElementChild.innerText = list.effect;
 
+	}else if( searched ){
+		
+		let artifactList = document.getElementsByClassName("item-artifact");
+		for (let i = 0; i < artifactList.length; i++){
+			artifactList[i].style.display = "none";
+		}
+		
+		let legendaryList = document.getElementsByClassName("item-legendary");
+		for (let i = 0; i < legendaryList.length; i++){
+			legendaryList[i].style.display = "block";
+		}
+	
+		// Clear old info
+		document.getElementById("item-info-might").style.display = "none";
+		document.getElementById("item-info-might-value").style.display = "none";
+		document.getElementById("item-info-box2").style.display = "none";
+		document.getElementById("item-info-level").style.display = "none";
+		document.getElementById("item-info-description").style.display = "none";
+		document.getElementById("item-info-quality").style.display = "none";
+		
+		document.getElementById("item-info-dots").innerHTML = "";
+		document.getElementById("item-info-box").style.paddingTop = "15px";
+		document.getElementById("item-info-bonus").innerHTML = "";
+		document.getElementById("item-info-stats-box").innerHTML = "";
+		document.getElementById("item-info-rank").innerHTML = "";
+		document.getElementById("item-info-dots").innerHTML = "";
+		
+		if( item.color == "EEE" ){
+			document.getElementById("item-info-name").style.color = "#a99776";
+		}else{
+			document.getElementById("item-info-name").style.color = "#" + item.color;
+		}
+		
+		document.getElementById("item-info-dots").innerHTML += '<img class="info-line" src="images/info_line.png"><div id="info-line-dot-box"></div>';
+		for(let i = 0; i < list.dots; i++){
+			document.getElementById("info-line-dot-box").innerHTML += '<img class="info-dots" src="images/dot.png">';
+		}
+
+		document.getElementById("item-info-name").firstElementChild.innerText = list.name;
+		
+		let itemQuality = "";
+		if( item.color == "00e8ff" ){
+			itemQuality = "Rare";
+		}else if( item.color == "ff00ff" ){
+			itemQuality = "Epic";
+		}else if( item.color == "e45010" ){
+			itemQuality = "Legendary";
+		}else if( item.color == "00e700" ){
+			itemQuality = "Magic";
+		}
+
+		document.getElementById("item-info-type").firstElementChild.innerText = itemQuality + " " + list.type;
+		
+		if( list.level ){
+			document.getElementById("item-info-level").style.display = "block";
+			document.getElementById("item-info-level").firstElementChild.innerText = "Item Power Level " + list.level;
+		}
+		
+		if( list.bonus ){
+			for(let i = 0; i < Object.keys(list.bonus).length; i++){
+				document.getElementById("item-info-bonus").innerHTML += '<div class="info-center text-normal"><p>' + Object.keys(list.bonus)[i] + '<span class="text-large"> ' + Object.values(list.bonus)[i] + '</span></p></div>';
+			}
+		}
+		
+		if( list.rank ){
+			for(let i = 0; i < Object.keys(list.rank).length; i++){
+				document.getElementById("item-info-rank").innerHTML += '<div class="item-info-stats text-small"><p class="stats-left">' + Object.keys(list.rank)[i] + '</p><span class="stats-right">' + Object.values(list.rank)[i] + '</span></div>';
+			}
+		}
+	
 	}else{
 		
 		// Clear old info
@@ -377,6 +540,8 @@ function getLegendaries(item){
 		document.getElementById("item-info-rank").innerHTML = "";
 		document.getElementById("item-info-dots").innerHTML = "";
 		document.getElementById("item-info-box").style.paddingTop = "65px";
+		
+		document.getElementById("item-info-name").style.color = "#e45010";
 		
 		let artifactList = document.getElementsByClassName("item-artifact");
 		for (let i = 0; i < artifactList.length; i++){
@@ -398,7 +563,7 @@ function getLegendaries(item){
 		for(let i = 0; i < list.dots; i++){
 			document.getElementById("info-line-dot-box").innerHTML += '<img class="info-dots" src="images/dot.png">';
 		}
-		
+
 		for(let i = 0; i < Object.keys(list.bonus).length; i++){
 			document.getElementById("item-info-bonus").innerHTML += '<div class="info-center text-normal"><p>' + Object.keys(list.bonus)[i] + '<span class="text-large"> ' + Object.values(list.bonus)[i] + '</span></p></div>';
 		}

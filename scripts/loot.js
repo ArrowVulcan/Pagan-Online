@@ -70,8 +70,8 @@ let HexingRiqs = {"name": "Hexing Riqs", "color": base, "type": "Weapon"};
 let InfusedDoyras = {"name": "Infused Doyras", "color": base, "type": "Weapon"};
 let InfusedRiqs = {"name": "Infused Riqs", "color": base, "type": "Weapon"};
 let InfusedTambourines = {"name": "Infused Tambourines", "color": base, "type": "Weapon"};
-let InscribedDoyras = {"name": "Inscribed Doyras", "color": base, "type": "Weapon"};
-let InscribedRiqs = {"name": "Inscribed Riqs", "color": base, "type": "Weapon"};
+let InscribedDoyras = {"name": "Inscribed Doyras", "color": base, "type": "Weapon", "level": 1};
+let InscribedRiqs = {"name": "Inscribed Riqs", "color": base, "type": "Weapon", "dots": "1", "level": 2, rank: {"Used by:": "Masha","Required Legacy Rank": "1"}, bonus: {"Damage": "24-32","Critical Chance": "6%"}};
 let InscribedTambourines = {"name": "Inscribed Tambourines", "color": base, "type": "Weapon"};
 let OccultDoyras = {"name": "Occult Doyras", "color": base, "type": "Weapon"};
 let RunicRiqs = {"name": "Runic Riqs", "color": base, "type": "Weapon"};
@@ -255,7 +255,7 @@ let BottledGale = {"name": "Bottled Gale", "color": epic, "type": "Crafting Mate
 let Brain = {"name": "Brain", "color": epic, "type": "Crafting Material"};
 let CapturedLightning = {"name": "Captured Lightning", "color": rare, "type": "Crafting Material"};
 let CelestialLight = {"name": "Celestial Light", "color": rare, "type": "Crafting Material"};
-let ConstructionPart = {"name": "Construction Part", "color": rare, "type": "Crafting Material"};
+let ConstructionPart = {"name": "Construction Part", "color": rare, "type": "Crafting Material", "dots": "1"};
 let CosmicSpark = {"name": "Cosmic Spark", "color": legendary, "type": "Crafting Material"};
 let CrystallizedFire = {"name": "Crystallized Fire", "color": rare, "type": "Crafting Material"};
 let DivineParticle = {"name": "Divine Particle", "color": legendary, "type": "Crafting Material"};
@@ -274,7 +274,7 @@ let Organ = {"name": "Organ", "color": rare, "type": "Crafting Material"};
 let RangersGear = {"name": "Ranger's Gear", "color": legendary, "type": "Crafting Material"};
 let ResilientWood = {"name": "Resilient Wood", "color": rare, "type": "Crafting Material"};
 let RuggedHide = {"name": "Rugged Hide", "color": magic, "type": "Crafting Material"};
-let SkeletalConstruct = {"name": "Skeletal Construct", "color": legendary, "type": "Crafting Material"};
+let SkeletalConstruct = {"name": "Skeletal Construct", "color": legendary, "type": "Crafting Material", "quality": "Legendary"};
 let SpectralAsh = {"name": "Spectral Ash", "color": magic, "type": "Crafting Material"};
 let Spine = {"name": "Spine", "color": epic, "type": "Crafting Material"};
 let StructuralReinforcement = {"name": "Structural Reinforcement", "color": rare, "type": "Crafting Material"};
@@ -351,14 +351,18 @@ let IgmanMustNotFall = [
 ]
 
 let OgnyasBravery = [
+	AshCrossbows,
 	Bone,
 	CapturedLightning,
 	ConstructionPart,
+	DarkTome,
 	InscribedCord,
 	InscribedDoyras,
+	InscribedRiqs,
 	MorokhShard,
 	ResilientWood,
 	SteelCarcanet,
+	SteelCharm,
 	SteelRiviere,
 	SteelWard,
 	TomeandGrimoireRecipe_Rare,

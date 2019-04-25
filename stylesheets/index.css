@@ -15,7 +15,7 @@
 	scrollbar-width: thin;
 }
 
-p{
+#left-bar p{
 	pointer-events: none;
 }
 
@@ -352,6 +352,7 @@ input:focus{
 	left: 30px;
 	font-size: 16px;
 	font-weight: normal;
+	display: table;
 }
 
 #dropList p{
