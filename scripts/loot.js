@@ -3,6 +3,7 @@
 #################### */
 
 let base = "EEE";
+let magic = "00e700";
 let rare = "00e8ff";
 let epic = "ff00ff";
 let legendary = "e45010";
@@ -23,6 +24,7 @@ let IronCleaver = {"name": "Iron Cleaver", "color": base, "type": "Weapon"};
 let RustyCleaver = {"name": "Rusty Cleaver", "color": base, "type": "Weapon"};
 let StoneAxe = {"name": "Stone Axe", "color": base, "type": "Weapon"};
 let PridefulAxe = {"name": "Prideful Axe", "color": base, "type": "Weapon"};
+let ZealousBattleaxe = {"name": "Zealous Battleaxe", "color": base, "type": "Weapon"};
 
 // Weapon (Dual Wield Boomerang)
 let BarbarianValari = {"name": "Barbarian Valari", "color": base, "type": "Weapon"};
@@ -37,6 +39,7 @@ let IronValari = {"name": "Iron Valari", "color": base, "type": "Weapon"};
 let PridefulBoomerang = {"name": "Prideful Boomerang", "color": base, "type": "Weapon"};
 let RustyChakram = {"name": "Rusty Chakram", "color": base, "type": "Weapon"};
 let TribalChakram = {"name": "Tribal Chakram", "color": base, "type": "Weapon"};
+let ZealousValari = {"name": "Zealous Valari", "color": base, "type": "Weapon"};
 
 // Weapon (Cleaver)
 let BoneCleaver = {"name": "Bone Cleaver", "color": base, "type": "Weapon"};
@@ -56,6 +59,7 @@ let ObsidianArbalests = {"name": "Obsidian Arbalests", "color": base, "type": "W
 let PridefulArbalests = {"name": "Prideful Arbalests", "color": base, "type": "Weapon"};
 let RustyManuballistas = {"name": "Rusty Manuballistas", "color": base, "type": "Weapon"};
 let TribalCrossbows = {"name": "Tribal Crossbows", "color": base, "type": "Weapon"};
+let ZealousCrossbows = {"name": "Zealous Crossbows", "color": base, "type": "Weapon"};
 
 // Weapon (Dual Wield Doyra)
 let AttunedTambourines = {"name": "Attuned Tambourines", "color": base, "type": "Weapon"};
@@ -64,6 +68,7 @@ let EngravedRiqs = {"name": "Engraved Riqs", "color": base, "type": "Weapon"};
 let EngravedTambourines = {"name": "Engraved Tambourines", "color": base, "type": "Weapon"};
 let HexingRiqs = {"name": "Hexing Riqs", "color": base, "type": "Weapon"};
 let InfusedDoyras = {"name": "Infused Doyras", "color": base, "type": "Weapon"};
+let InfusedRiqs = {"name": "Infused Riqs", "color": base, "type": "Weapon"};
 let InfusedTambourines = {"name": "Infused Tambourines", "color": base, "type": "Weapon"};
 let InscribedDoyras = {"name": "Inscribed Doyras", "color": base, "type": "Weapon"};
 let InscribedRiqs = {"name": "Inscribed Riqs", "color": base, "type": "Weapon"};
@@ -71,6 +76,7 @@ let InscribedTambourines = {"name": "Inscribed Tambourines", "color": base, "typ
 let OccultDoyras = {"name": "Occult Doyras", "color": base, "type": "Weapon"};
 let RunicRiqs = {"name": "Runic Riqs", "color": base, "type": "Weapon"};
 let ShiftingDoyras = {"name": "Shifting Doyras", "color": base, "type": "Weapon"};
+let ThaumaturgicRiqs = {"name": "Thaumaturgic Riqs", "color": base, "type": "Weapon"};
 let WarpedTambourines = {"name": "Warped Tambourines", "color": base, "type": "Weapon"};
 let WizardsTambourines = {"name": "Wizard's Tambourines", "color": base, "type": "Weapon"};
 
@@ -184,6 +190,7 @@ let BronzeCharm = {"name": "Bronze Charm", "color": base, "type": "Charm"};
 let BronzeTalisman = {"name": "Bronze Talisman", "color": base, "type": "Charm"};
 let DireCharm = {"name": "Dire Charm", "color": base, "type": "Charm"};
 let DireTalisman = {"name": "Dire Talisman", "color": base, "type": "Charm"};
+let EnhancedCharm = {"name": "Enhanced Charm", "color": base, "type": "Charm"};
 let EnhancedTalisman = {"name": "Enhanced Talisman", "color": base, "type": "Charm"};
 let GrimCharm = {"name": "Grim Charm", "color": base, "type": "Charm"}
 let GrimTalisman = {"name": "Grim Talisman", "color": base, "type": "Charm"};
@@ -242,6 +249,7 @@ let ArborealShard = {"name": "Arboreal Shard", "color": epic, "type": "Crafting 
 let ArchitecturalElement = {"name": "Architectural Element", "color": epic, "type": "Crafting Material"};
 let ArmorSegment = {"name": "Armor Segment", "color": epic, "type": "Crafting Material"};
 let Biomass = {"name": "Biomass", "color": legendary, "type": "Crafting Material"};
+let BlueFlame = {"name": "Blue Flame", "color": magic, "type": "Crafting Material"};
 let Bone = {"name": "Bone", "color": rare, "type": "Crafting Material"};
 let BottledGale = {"name": "Bottled Gale", "color": epic, "type": "Crafting Material"};
 let Brain = {"name": "Brain", "color": epic, "type": "Crafting Material"};
@@ -257,17 +265,22 @@ let EnchantedPyre = {"name": "Enchanted Pyre", "color": epic, "type": "Crafting 
 let EnergyOrb = {"name": "Energy Orb", "color": rare, "type": "Crafting Material"};
 let GrowingRaiment = {"name": "Growing Raiment", "color": epic, "type": "Crafting Material"};
 let InfusedLeather = {"name": "Infused Leather", "color": rare, "type": "Crafting Material"};
+let IronOre = {"name": "Iron Ore", "color": magic, "type": "Crafting Material"};
 let JaggedPelt = {"name": "Jagged Pelt", "color": rare, "type": "Crafting Material"};
 let Limb = {"name": "Limb", "color": epic, "type": "Crafting Material"};
 let LivingPlate = {"name": "Living Plate", "color": epic, "type": "Crafting Material"};
+let LuminescentPlant = {"name": "Luminescent Plant", "color": magic, "type": "Crafting Material"};
 let Organ = {"name": "Organ", "color": rare, "type": "Crafting Material"};
 let RangersGear = {"name": "Ranger's Gear", "color": legendary, "type": "Crafting Material"};
 let ResilientWood = {"name": "Resilient Wood", "color": rare, "type": "Crafting Material"};
+let RuggedHide = {"name": "Rugged Hide", "color": magic, "type": "Crafting Material"};
 let SkeletalConstruct = {"name": "Skeletal Construct", "color": legendary, "type": "Crafting Material"};
+let SpectralAsh = {"name": "Spectral Ash", "color": magic, "type": "Crafting Material"};
 let Spine = {"name": "Spine", "color": epic, "type": "Crafting Material"};
 let StructuralReinforcement = {"name": "Structural Reinforcement", "color": rare, "type": "Crafting Material"};
 let SturdyTools = {"name": "Sturdy Tools", "color": rare, "type": "Crafting Material"};
 let SylvanCoat = {"name": "Sylvan Coat", "color": legendary, "type": "Crafting Material"};
+let ThornyBark = {"name": "Thorny Bark", "color": magic, "type": "Crafting Material"};
 let Tissue = {"name": "Tissue", "color": rare, "type": "Crafting Material"};
 let WeaponFragment = {"name": "Weapon Fragment", "color": epic, "type": "Crafting Material"};
 
@@ -289,10 +302,12 @@ let WeaponRecipe_Rare = {"name": "Weapon Recipe", "color": rare, "type": "Recipe
 let BlueprintforAftershock = {"name": "Blueprint for Aftershock", "color": legendary, "type": "Blueprint"};
 let BlueprintforArcaneConduit = {"name": "Blueprint for Arcane Conduit", "color": legendary, "type": "Blueprint"};
 let BlueprintforElementalSupremacy = {"name": "Blueprint for Elemental Supremacy", "color": legendary, "type": "Blueprint"};
+let BlueprintforMonolith = {"name": "Blueprint for Monolith", "color": legendary, "type": "Blueprint"};
 let BlueprintforMoranasLonging = {"name": "Blueprint for Morana's Longing", "color": legendary, "type": "Blueprint"};
 let BlueprintforNetherVeil = {"name": "Blueprint for Nether Veil", "color": legendary, "type": "Blueprint"};
 let BlueprintforNoWoundTooDeep = {"name": "Blueprint for No Wound Too Deep", "color": legendary, "type": "Blueprint"};
 let BlueprintforThunderingPulse = {"name": "Blueprint for Thundering Pulse", "color": legendary, "type": "Blueprint"};
+let BlueprintforUmbraMortis = {"name": "Blueprint for Umbra Mortis", "color": legendary, "type": "Blueprint"};
 
 // Artifact
 let AnimalHeartRabbit = {"name": "Animal Heart: Rabbit", "color": legendary, "type": "Artifact"};
@@ -1159,6 +1174,11 @@ let Dragonslayer = [
 	SturdyTools,
 	Tissue,
 	WeaponRecipe_Epic,
+	StructuralReinforcement,
+	ConstructionPart,
+	Bone,
+	CosmicSpark,
+	CharmandTalismanRecipe_Epic,
 ]
 
 let Seekandyoushallfind = [
@@ -1431,6 +1451,8 @@ let EndTimes = [
 	TomeandGrimoireRecipe_Rare,
 	WeaponFragment,
 	WeaponRecipe_Rare,
+	InfusedCord,
+	InfusedRiqs,
 ]
 
 let HonorableRetreat = [
@@ -1660,8 +1682,12 @@ let AnEndlessSpring = [
 ]
 
 let RestlessRelentless = [
+	AmuletRecipe_Rare,
 	AncestralArtifact,
+	AnyaShard,
+	ArchitecturalElement,
 	AstralRing,
+	Biomass,
 	BolsteredCharm,
 	Bone,
 	Brain,
@@ -1670,31 +1696,74 @@ let RestlessRelentless = [
 	ConstructionPart,
 	CrystallizedFire,
 	DestructionRing,
+	DruidicGarment,
 	ElementalForce,
 	EnergyOrb,
 	EnhancedAegis,
+	EnhancedCharm,
 	EnhancedGrimore,
 	EnhancedTalisman,
+	InfusedLeather,
+	IstokShard,
+	JaggedPelt,
+	LivingPlate,
+	Organ,
+	PridefulAxe,
 	PridefulBlackjack,
+	PridefulBoomerang,
+	PridefulRipper,
+	ResilientWood,
 	StribogsTalisman,
+	StructuralReinforcement,
+	SturdyTools,
 	SylvanCoat,
+	ThaumaturgicRiqs,
 	ThaumaturgicShillelagh,
 	Tissue,
+	TomeandGrimoireRecipe_Rare,
+	WeaponFragment,
 	WizardsStaff,
+	WizardsTambourines,
+	ZealousBattleaxe,
+	ZealousCrossbows,
 	ZealousCudgel,
+	ZealousValari,
 ]
 
 let TwilightofTheThunderGod = [
+	ArborealShard,
 	ArchitecturalElement,
 	ArmorSegment,
+	BlueFlame,
+	BlueprintforMonolith,
+	BlueprintforUmbraMortis,
 	Bone,
 	BottledGale,
+	Brain,
 	CapturedLightning,
+	CharmandTalismanRecipe_Epic,
 	ConstructionPart,
+	EnchantedPyre,
+	EnergyOrb,
+	GrowingRaiment,
+	InfusedLeather,
+	IronOre,
+	JaggedPelt,
+	Limb,
 	LivingPlate,
+	LuminescentPlant,
+	ResilientWood,
+	RingRecipe_Epic,
+	RuggedHide,
+	SpectralAsh,
+	Spine,
 	StructuralReinforcement,
 	SturdyTools,
+	ThornyBark,
 	Tissue,
+	TomeandGrimoireRecipe_Epic,
 	WeaponFragment,
 	WeaponRecipe_Epic,
+	CelestialLight,
+	Organ,
 ]

@@ -12,9 +12,9 @@ You can find the site here: https://arrowvulcan.github.io/Pagan-Online/
 
 <b>[Act III]</b> All are started
 
-<b>[Act IV]</b> Empty
+<b>[Act IV]</b> All are started
 
-<b>[Act V]</b> "An Endless Spring" is started, everything else is empty
+<b>[Act V]</b> All are started
 
 <b>[Legendaries]</b> Started
 

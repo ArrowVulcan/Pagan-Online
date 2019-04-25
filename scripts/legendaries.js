@@ -310,4 +310,12 @@ let legendaryItemList = [
 		"effect": "Health potions replenish 100% of your resource pool.",
 	},
 	
+	AnimalHeartRabbit = {
+		"name": "Animal Heart: Rabbit",
+		"type": "Artifact",
+		"dots": "2",
+		"descriptionArtifact": "A heart extractedfrom a sanctified rabbit bears all its spiritual trappings: fleetness of foot, quickness of wit, and an excess of energy and vigor. The essence of lepid trickery courses strongly through the remaining veins, inundating it with great power.",
+		"effect": "After exiting Shelter, gain 40% Movement Speed and deal double damage for the next 3 seconds.",
+	},
+	
 ]
