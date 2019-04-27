@@ -9,6 +9,16 @@ var timeoutList = [];
 /* ####################
 	Functions
 #################### */
+function dropdown(arg){
+
+	if( arg == 'show' ){
+		$("#drop-list").css("top", "0px");
+	}else{
+		$("#drop-list").css("top", "-250px");
+	}
+
+}
+
 function getColor(e){
 
 	if( e == "Base" ){ return "#a99776"; }
@@ -109,6 +119,8 @@ function getSpreadsheet(){
 		$("#search").css("opacity", "1");
 		$("#loader").css("opacity", "0");
 		
+		$("#dropdown").css("opacity", "1");
+		
 		setTimeout(function(){
 			$("#loader").css("display", "none");
 		}, 500);
@@ -121,10 +133,12 @@ function itemSearch(event){
 
 	if( canSearch == false ){ return false; }
 	
-	if( event.key != "Enter" ){ return false; }
+	if( event.key != "Enter" && event.type != "mousedown" ){ return false; }
 
 	let search = document.getElementById("searchbar");
 	let filter = search.value.toUpperCase();
+	
+	if( event.type == "mousedown" ){ filter = event.target.dataset.weapon.toUpperCase(); }
 	
 	if( filter == "" || filter == " " ){ return false; }
 	
@@ -144,7 +158,7 @@ function itemSearch(event){
 
 	for(let i = 1; i < items.length; i++){
 		
-		if( items[i].firstElementChild.innerText.toUpperCase().indexOf(filter) > -1 ){
+		if( event.type == "mousedown" ? (items[i].dataset.type.toUpperCase() == filter) : (items[i].firstElementChild.innerText.toUpperCase().indexOf(filter) > -1 ) ){
 			
 			itemsFound++;
 			
@@ -390,6 +404,7 @@ function moveTooltip(obj, event){
 	
 	let info = document.getElementById("tooltip");
 	let offset = info.offsetHeight;
+	let offset2 = info.offsetWidth;
 	let infoWidth = 280;
 	
 	if( event.pageY - 70 + offset >= windowHeight ){
@@ -406,7 +421,15 @@ function moveTooltip(obj, event){
 		
 	}
 	
-	info.style.left = event.pageX - infoWidth - 20 + "px";
+	if( event.pageX - offset2 - 20 <= 0 ){
+		
+		info.style.left = 10 + "px";
+		
+	}else{
+	
+		info.style.left = event.pageX - infoWidth - 20 + "px";
+	
+	}
 	
 }
 

@@ -102,6 +102,7 @@ input:focus{
 	opacity: 0;
 	display: none;
 	transition: opacity 500ms linear 1s;
+	padding: 0px 50px;
 }
 
 .item{
@@ -124,6 +125,7 @@ input:focus{
 	background-color: #edebe7;
 	opacity: 0;
 	pointer-events: none;
+	z-index: 10;
 }
 
 #might-box{
@@ -326,6 +328,62 @@ input:focus{
     margin: 0px 20px;
     margin-top: 10px;
     text-align: center;
+}
+
+#dropdown{
+    position: absolute;
+    left: 4%;
+    top: -4px;
+    text-align: center;
+	opacity: 0;
+	transition: opacity 500ms linear 500ms;
+	height: 70px;
+}
+
+#drop-title{
+    position: relative;
+    top: -68px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #000;
+    margin-bottom: -68px;
+    z-index: 3;
+}
+
+.drop-item{
+    position: relative;
+    font-size: 16px;
+    background-color: #4c333d;
+    box-shadow: 0px 0px 1px #000;
+    color: #FFF;
+    height: 25px;
+	transition: background-color 100ms linear;
+	z-index: 1;
+}
+
+.drop-item:hover{
+	background-color: #775361;
+}
+
+#drop-img{
+	position: relative;
+	z-index: 2;
+}
+
+#drop-list{
+    position: relative;
+    width: 165px;
+    margin: 0 auto;
+    margin-top: 10px;
+	transition: top 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    top: -250px;
+}
+
+.drop-item p{
+	position: relative;
+	top: 3px;
+	pointer-events: none;
 }
 
 /* ####################
