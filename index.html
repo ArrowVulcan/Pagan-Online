@@ -23,20 +23,41 @@
 
 <body>
 
-	<div id="dropdown" onmouseenter="dropdown('show')", onmouseleave="dropdown('hide')">
-		<div id="drop-img"><img src="images/dropdown.png"></div>
-		<p id="drop-title">Heroes</p>
-		<div id="drop-list">
-			<div class="drop-item"></div>
-			<div class="drop-item" data-weapon="One-Handed Whip" onmousedown="itemSearch(event)"><p>ANYA</p></div>
-			<div class="drop-item" data-weapon="Dual Wield Boomerang" onmousedown="itemSearch(event)"><p>DAMEER</p></div>
-			<div class="drop-item" data-weapon="One-Handed Blunt" onmousedown="itemSearch(event)"><p>ISTOK</p></div>
-			<div class="drop-item" data-weapon="Two-Handed Axe" onmousedown="itemSearch(event)"><p>KINGEWITCH</p></div>
-			<div class="drop-item" data-weapon="One-Handed Staff" onmousedown="itemSearch(event)"><p>LUKIAN</p></div>
-			<div class="drop-item" data-weapon="Dual Wield Doyra" onmousedown="itemSearch(event)"><p>MASHA</p></div>
-			<div class="drop-item" data-weapon="Two-Handed Scythe" onmousedown="itemSearch(event)"><p>MOROKH</p></div>
-			<div class="drop-item" data-weapon="Dual Wield Crossbow" onmousedown="itemSearch(event)"><p>VALERIA</p></div>
+	<div id="dropdowns">
+
+		<div id="dropdown" onmouseenter="dropdown('show',1)", onmouseleave="dropdown('hide',1)">
+			<div id="drop-img"><img src="images/dropdown.png"></div>
+			<p id="drop-title">Heroes</p>
+			<div id="drop-list-1">
+				<div class="drop-item"></div>
+				<div class="drop-item" data-weapon="One-Handed Whip" onmousedown="itemSearch(event)"><p>ANYA</p></div>
+				<div class="drop-item" data-weapon="Dual Wield Boomerang" onmousedown="itemSearch(event)"><p>DAMEER</p></div>
+				<div class="drop-item" data-weapon="One-Handed Blunt" onmousedown="itemSearch(event)"><p>ISTOK</p></div>
+				<div class="drop-item" data-weapon="Two-Handed Axe" onmousedown="itemSearch(event)"><p>KINGEWITCH</p></div>
+				<div class="drop-item" data-weapon="One-Handed Staff" onmousedown="itemSearch(event)"><p>LUKIAN</p></div>
+				<div class="drop-item" data-weapon="Dual Wield Doyra" onmousedown="itemSearch(event)"><p>MASHA</p></div>
+				<div class="drop-item" data-weapon="Two-Handed Scythe" onmousedown="itemSearch(event)"><p>MOROKH</p></div>
+				<div class="drop-item" data-weapon="Dual Wield Crossbow" onmousedown="itemSearch(event)"><p>VALERIA</p></div>
+			</div>
 		</div>
+		
+		<div id="dropdown2" onmouseenter="dropdown('show',2)", onmouseleave="dropdown('hide',2)">
+			<div id="drop-img"><img src="images/dropdown.png"></div>
+			<p id="drop-title">Items</p>
+			<div id="drop-list-2">
+				<div class="drop-item"></div>
+				<div class="drop-item" data-weapon="Amulet" onmousedown="itemSearch(event)"><p>AMULET</p></div>
+				<div class="drop-item" data-weapon="Artifact" onmousedown="itemSearch(event)"><p>ARTIFACT</p></div>
+				<div class="drop-item" data-weapon="Blueprint" onmousedown="itemSearch(event)"><p>BLUEPRINT</p></div>
+				<div class="drop-item" data-weapon="Charm" onmousedown="itemSearch(event)"><p>CHARM</p></div>
+				<div class="drop-item" data-weapon="Crafting Material" onmousedown="itemSearch(event)"><p>CRAFTING MATERIAL</p></div>
+				<div class="drop-item" data-weapon="Ring" onmousedown="itemSearch(event)"><p>RING</p></div>
+				<div class="drop-item" data-weapon="Shard" onmousedown="itemSearch(event)"><p>SHARD</p></div>
+				<div class="drop-item" data-weapon="Tome" onmousedown="itemSearch(event)"><p>TOME</p></div>
+				<div class="drop-item" data-weapon="Ward" onmousedown="itemSearch(event)"><p>WARD</p></div>
+			</div>
+		</div>
+	
 	</div>
 
 	<div id="search">

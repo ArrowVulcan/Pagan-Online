@@ -9,12 +9,12 @@ var timeoutList = [];
 /* ####################
 	Functions
 #################### */
-function dropdown(arg){
+function dropdown(arg, id){
 
 	if( arg == 'show' ){
-		$("#drop-list").css("top", "0px");
+		$("#drop-list-" + id).css("top", "0px");
 	}else{
-		$("#drop-list").css("top", "-250px");
+		$("#drop-list-" + id).css("top", "-250px");
 	}
 
 }
@@ -25,7 +25,7 @@ function getColor(e){
 	if( e == "Rare" ){ return "#009fd6"; }
 	if( e == "Epic" ){ return "#ff00ff"; }
 	if( e == "Legendary" ){ return "#e45010"; }
-	if( e == "Magic" ){ return "#00e700"; }
+	if( e == "Magic" ){ return "#5fbc5f"; }
 
 	return "#000";
 
@@ -104,7 +104,10 @@ function getSpreadsheet(){
 	const postfix = "/od6/public/values?alt=json";
 	const spreadsheetURL = prefix + sheetId + postfix;
 
-	$.getJSON(spreadsheetURL, function(data){
+	/*
+
+	$.getJSON(spreadsheetURL)
+	.done(function(data){
 
 		var contentList = document.getElementById("contentList");
 		let itemList = data.feed.entry;
@@ -125,6 +128,46 @@ function getSpreadsheet(){
 			$("#loader").css("display", "none");
 		}, 500);
 
+	})
+	.fail(function(jqxhr, textStatus, error){
+		
+		$("#text").text("Error Getting Database...");
+		
+	});
+	
+	*/
+	
+	$.ajax({
+		type: "GET",
+		dataType: 'jsonp',
+		url: spreadsheetURL,
+		success: function(data){
+			
+			var contentList = document.getElementById("contentList");
+			let itemList = data.feed.entry;
+			
+			contentList.innerHTML += '<div id="notfound" class="item"><p>No results found.</p></div>';
+			
+			for(let i = 0; i < itemList.length; i++){
+				contentList.innerHTML += '<div class="item" onmouseover="showTooltip()" onmouseout="hideTooltip()" onmousemove="moveTooltip(this, event)" data-name="' + itemList[i].gsx$name.$t + '" data-type="' + itemList[i].gsx$type.$t + '" data-level="' + itemList[i].gsx$itempowerlevel.$t + '" data-rarity="' + itemList[i].gsx$rarity.$t + '" data-quality="' + itemList[i].gsx$quality.$t + '" data-might="' + itemList[i].gsx$might.$t + '" data-tier="' + itemList[i].gsx$tier.$t + '" data-hero="' + itemList[i].gsx$hero.$t + '" data-rank="' + itemList[i].gsx$rank.$t + '" data-stats="' + itemList[i].gsx$stats.$t + '" data-bonus="' + itemList[i].gsx$bonus.$t + '" data-description="' + itemList[i].gsx$description.$t + '" data-craftingtype="' + itemList[i].gsx$craftingtype.$t + '" data-affect="' + itemList[i].gsx$affect.$t + '" data-effect="' + itemList[i].gsx$effect.$t + '" data-location="' + itemList[i].gsx$location.$t + '"><p style="color: ' + getColor(itemList[i].gsx$rarity.$t) + '">' + itemList[i].gsx$name.$t + '</p></div>';
+			}
+			
+			canSearch = true;
+			$("#search").css("opacity", "1");
+			$("#loader").css("opacity", "0");
+			
+			$("#dropdowns").css("opacity", "1");
+			
+			setTimeout(function(){
+				$("#loader").css("display", "none");
+			}, 500);
+			
+		},
+		error: function(){
+			
+			$("#text").text("Error Getting Database...");
+			
+		}
 	});
 	
 }
@@ -411,9 +454,9 @@ function moveTooltip(obj, event){
 		
 		info.style.top = (windowHeight - offset - 10) + "px";
 		
-	}else if( event.pageY + 85 - offset <= 0 ){
+	}else if( event.pageY + 60 - offset/2 <= 0 ){
 		
-		info.style.top = 50 + "px";
+		info.style.top = 60 + "px";
 		
 	}else{
 		
@@ -421,7 +464,7 @@ function moveTooltip(obj, event){
 		
 	}
 	
-	if( event.pageX - offset2 - 20 <= 0 ){
+	if( event.pageX - offset2 - 30 <= 0 ){
 		
 		info.style.left = 10 + "px";
 		
