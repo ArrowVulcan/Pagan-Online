@@ -26,8 +26,8 @@
 	<div id="dropdowns">
 
 		<div id="dropdown" onmouseenter="dropdown('show',1)", onmouseleave="dropdown('hide',1)">
-			<div id="drop-img"><img src="images/dropdown.png"></div>
-			<p id="drop-title">Heroes</p>
+			<div class="drop-img"><img alt="dropdown" src="images/dropdown.png"></div>
+			<p class="drop-title">Heroes</p>
 			<div id="drop-list-1">
 				<div class="drop-item"></div>
 				<div class="drop-item" data-weapon="One-Handed Whip" onmousedown="itemSearch(event)"><p>ANYA</p></div>
@@ -42,8 +42,8 @@
 		</div>
 		
 		<div id="dropdown2" onmouseenter="dropdown('show',2)", onmouseleave="dropdown('hide',2)">
-			<div id="drop-img"><img src="images/dropdown.png"></div>
-			<p id="drop-title">Items</p>
+			<div class="drop-img"><img alt="dropdown" src="images/dropdown.png"></div>
+			<p class="drop-title">Items</p>
 			<div id="drop-list-2">
 				<div class="drop-item"></div>
 				<div class="drop-item" data-weapon="Amulet" onmousedown="itemSearch(event)"><p>AMULET</p></div>
@@ -61,7 +61,7 @@
 	</div>
 
 	<div id="search">
-		<div id="logo"><img src="images/logo.png"></div>
+		<div id="logo"><img alt="logo" src="images/logo.png"></div>
 		<input id="searchbar" onkeydown="itemSearch(event)" placeholder="Search Item.." type="text" name="item">
 	</div>
 	

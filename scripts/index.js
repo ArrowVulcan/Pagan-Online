@@ -103,39 +103,6 @@ function getSpreadsheet(){
 	const sheetId = "1K96Um2uKOu03ILVPHs_DkTzZ-41XSVabbULXDVQciRE";
 	const postfix = "/od6/public/values?alt=json";
 	const spreadsheetURL = prefix + sheetId + postfix;
-
-	/*
-
-	$.getJSON(spreadsheetURL)
-	.done(function(data){
-
-		var contentList = document.getElementById("contentList");
-		let itemList = data.feed.entry;
-		
-		contentList.innerHTML += '<div id="notfound" class="item"><p>No results found.</p></div>';
-		
-		for(let i = 0; i < itemList.length; i++){
-			contentList.innerHTML += '<div class="item" onmouseover="showTooltip()" onmouseout="hideTooltip()" onmousemove="moveTooltip(this, event)" data-name="' + itemList[i].gsx$name.$t + '" data-type="' + itemList[i].gsx$type.$t + '" data-level="' + itemList[i].gsx$itempowerlevel.$t + '" data-rarity="' + itemList[i].gsx$rarity.$t + '" data-quality="' + itemList[i].gsx$quality.$t + '" data-might="' + itemList[i].gsx$might.$t + '" data-tier="' + itemList[i].gsx$tier.$t + '" data-hero="' + itemList[i].gsx$hero.$t + '" data-rank="' + itemList[i].gsx$rank.$t + '" data-stats="' + itemList[i].gsx$stats.$t + '" data-bonus="' + itemList[i].gsx$bonus.$t + '" data-description="' + itemList[i].gsx$description.$t + '" data-craftingtype="' + itemList[i].gsx$craftingtype.$t + '" data-affect="' + itemList[i].gsx$affect.$t + '" data-effect="' + itemList[i].gsx$effect.$t + '" data-location="' + itemList[i].gsx$location.$t + '"><p style="color: ' + getColor(itemList[i].gsx$rarity.$t) + '">' + itemList[i].gsx$name.$t + '</p></div>';
-		}
-		
-		canSearch = true;
-		$("#search").css("opacity", "1");
-		$("#loader").css("opacity", "0");
-		
-		$("#dropdown").css("opacity", "1");
-		
-		setTimeout(function(){
-			$("#loader").css("display", "none");
-		}, 500);
-
-	})
-	.fail(function(jqxhr, textStatus, error){
-		
-		$("#text").text("Error Getting Database...");
-		
-	});
-	
-	*/
 	
 	$.ajax({
 		type: "GET",
@@ -433,10 +400,18 @@ function moveTooltip(obj, event){
 			
 		}
 		
-		// Remove empty acts
+		// Remove empty acts and scale location tooltip size for content.
+		let maxMaps = 0;
 		for(let i = 1; i <= 5; i++){
+			
 			if( document.getElementById("map-act-" + i).childElementCount == 0 ){ document.getElementById("map-act-" + i).previousSibling.remove() }
+			if( document.getElementById("map-act-" + i).childElementCount > maxMaps ){ maxMaps = document.getElementById("map-act-" + i).childElementCount; }
+			
 		}
+		
+		if( maxMaps == 1 ){ $("#location").css("width", "220px"); }
+		if( maxMaps == 2 ){ $("#location").css("width", "420px"); }
+		if( maxMaps >= 3 ){ $("#location").css("width", "630px"); }
 		
 	}
 	
